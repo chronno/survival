@@ -10,7 +10,6 @@ public class SurvivalGameLauncher {
 		config.setIdleFPS(60);
 		config.setTitle("Survival");
 		config.setWindowedMode(960, 640);
-		
 		new Lwjgl3Application(new SurvivalGame(), config);
 	}
 }

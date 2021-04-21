@@ -1,8 +1,11 @@
 package com.chronno.survival.game;
 
-import java.util.Optional;
+import java.io.IOException;
+
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
 import com.chronno.survival.network.client.GameClient;
 
 public class SurvivalGame extends Game {
@@ -11,14 +14,19 @@ public class SurvivalGame extends Game {
 	
 	public SurvivalGame() {
 		super();
-		client = new GameClient();
-		client.connect("181.164.136.246", Optional.of(25565), Optional.of(25575));
+		this.client = new GameClient(new NetworkInterpreter());
+		client.connect("181.164.136.246", 25565, 25575);
 	}
 
 	@Override
 	public void create() {
-		
-		
+		Gdx.gl.glClearColor(0,0,0,1);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		try {
+			this.client.getClient().update(5000);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

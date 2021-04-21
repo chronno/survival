@@ -4,8 +4,11 @@ import java.io.IOException;
 import java.util.Optional;
 
 import com.chronno.survival.network.exception.ClientConnectionException;
+import com.chronno.survival.network.messaging.MessageRegistry;
+import com.chronno.survival.network.server.MessageInterpreter;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Client;
+import com.esotericsoftware.kryonet.Listener;
 import com.esotericsoftware.minlog.Log;
 
 public class GameClient {
@@ -15,23 +18,22 @@ public class GameClient {
 	private final Kryo kryo;
 
 	
-	public GameClient() {
+	public GameClient(MessageInterpreter interpreter) {
 		this.client = new Client();
-		this.client.addListener(new ClientListener());
-		this.kryo = client.getKryo();	
+		this.client.addListener(new Listener.ThreadedListener(new ClientListener(interpreter)));
+		this.kryo = client.getKryo();
+		MessageRegistry.register(this.kryo);
 	}
 	
-	public void connect(String serverIp, Optional<Integer> tcpPort, Optional<Integer> udpPort) {
+	public void connect(String serverIp, Integer tcpPort,  Integer udpPort) {
 		try {
 			this.client.start();
-			this.client.connect(1000, serverIp, tcpPort.orElse(DEFAULT_TCP_PORT), udpPort.orElse(DEFAULT_UDP_PORT));
-			this.client.run();
+			this.client.connect(1000, serverIp, Optional.ofNullable(tcpPort).orElse(DEFAULT_TCP_PORT), Optional.of(udpPort).orElse(DEFAULT_UDP_PORT));
+
 		} catch (IOException e) {
 			Log.info(String.format("could not connect to: %s", serverIp));
-			throw new ClientConnectionException(String.format("failed to connect to: %s", serverIp), e);
-			
-		} finally {
 			this.client.stop();
+			throw new ClientConnectionException(String.format("failed to connect to: %s", serverIp), e);
 		}
 	}
 	

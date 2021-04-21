@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 import com.chronno.survival.network.exception.ServerStartupException;
+import com.chronno.survival.network.messaging.MessageRegistry;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Server;
 import com.esotericsoftware.minlog.Log;
@@ -17,10 +18,11 @@ public class GameServer {
 	private Integer tcpPort;
 	private Integer udpPort;
 	
-	public GameServer() {
+	public GameServer(MessageInterpreter interpreter) {
 		this.server = new Server();
-		this.server.addListener(new ServerListener(this.server));
+		this.server.addListener(new ServerListener(this.server, interpreter));
 		this.kryo = server.getKryo();
+		MessageRegistry.register(this.kryo);
 	}
 
 	public void bindPorts(Integer tcpPort, Integer udpPort) {
