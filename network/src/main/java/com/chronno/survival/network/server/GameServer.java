@@ -10,37 +10,34 @@ import com.esotericsoftware.minlog.Log;
 
 public class GameServer {
 
-	private static final Integer DEFAULT_TCP_PORT = 54555;
-	private static final Integer DEFAULT_UDP_PORT = 54777;
+	private static final Integer DEFAULT_TCP_PORT = 25565;
+	private static final Integer DEFAULT_UDP_PORT = 25575;
 	private final Server server;
 	private final Kryo kryo;
-	private Optional<Integer> tcpPort;
-	private Optional<Integer> udpPort;
+	private Integer tcpPort;
+	private Integer udpPort;
 	
 	public GameServer() {
 		this.server = new Server();
 		this.server.addListener(new ServerListener());
 		this.kryo = server.getKryo();
-		this.udpPort = Optional.empty();
-		this.tcpPort = Optional.empty();
 	}
 
 	public void bindPorts(Integer tcpPort, Integer udpPort) {
-		this.tcpPort = Optional.of(tcpPort);
-		this.udpPort =  Optional.of(udpPort);
+		this.tcpPort = tcpPort;
+		this.udpPort =  udpPort;
 	}
 	
 	
 	public void run() {
 		try {
-			this.server.bind(this.tcpPort.orElse(DEFAULT_TCP_PORT), this.udpPort.orElse(DEFAULT_UDP_PORT));
+			this.server.bind(Optional.ofNullable(tcpPort).orElse(DEFAULT_TCP_PORT), Optional.ofNullable(udpPort).orElse(DEFAULT_UDP_PORT));
 			this.server.run();
 			Log.info("server is running");
 		} catch (IOException e) {
 			Log.info("server failed to start");
 			throw new ServerStartupException("Server failed to start", e);
 		}
-		
 	}
 	
 	public Server getServer() {
@@ -48,11 +45,11 @@ public class GameServer {
 	}
 
 	public Integer getTcpPort() {
-		return tcpPort.get();
+		return tcpPort;
 	}
 
 	public Integer getUdpPort() {
-		return udpPort.get();
+		return udpPort;
 	}
 
 	public Kryo getKryo() {
