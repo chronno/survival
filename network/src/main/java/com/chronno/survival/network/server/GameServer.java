@@ -19,7 +19,7 @@ public class GameServer {
 	
 	public GameServer() {
 		this.server = new Server();
-		this.server.addListener(new ServerListener());
+		this.server.addListener(new ServerListener(this.server));
 		this.kryo = server.getKryo();
 	}
 

@@ -1,7 +1,6 @@
 package com.chronno.survival.server;
 
 import com.chronno.survival.network.server.GameServer;
-import com.esotericsoftware.minlog.Log;
 
 public class ServerStartup {
 	
