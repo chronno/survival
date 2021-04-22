@@ -15,18 +15,23 @@ public class SurvivalGame extends Game {
 	public SurvivalGame() {
 		super();
 		this.client = new GameClient(new NetworkInterpreter());
-		client.connect("181.164.136.246", 25565, 25575);
+		this.client.connect("181.164.136.246", 25565, 25575);
+	}
+
+	@Override
+	public void dispose() {
+		this.client.disconnect();
 	}
 
 	@Override
 	public void create() {
+
+	}
+
+	@Override
+	public void render() {
 		Gdx.gl.glClearColor(0,0,0,1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		try {
-			this.client.getClient().update(5000);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 
 }

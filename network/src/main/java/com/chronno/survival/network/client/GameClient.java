@@ -16,11 +16,10 @@ public class GameClient {
 	private static final Integer DEFAULT_UDP_PORT = 54777;
 	private final Client client;
 	private final Kryo kryo;
-
 	
 	public GameClient(MessageInterpreter interpreter) {
 		this.client = new Client();
-		this.client.addListener(new Listener.ThreadedListener(new ClientListener(interpreter)));
+		this.client.addListener(new ClientListener(interpreter));
 		this.kryo = client.getKryo();
 		MessageRegistry.register(this.kryo);
 	}
@@ -29,12 +28,14 @@ public class GameClient {
 		try {
 			this.client.start();
 			this.client.connect(1000, serverIp, Optional.ofNullable(tcpPort).orElse(DEFAULT_TCP_PORT), Optional.of(udpPort).orElse(DEFAULT_UDP_PORT));
-
 		} catch (IOException e) {
 			Log.info(String.format("could not connect to: %s", serverIp));
-			this.client.stop();
 			throw new ClientConnectionException(String.format("failed to connect to: %s", serverIp), e);
 		}
+	}
+
+	public void disconnect() {
+		this.client.stop();
 	}
 	
 	public Client getClient() {
