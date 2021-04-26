@@ -1,4 +1,4 @@
-package com.chronno.survival.game;
+package com.chronno.survival.game.services.network;
 
 import com.chronno.survival.network.messaging.Message;
 import com.chronno.survival.network.server.MessageInterpreter;
