@@ -49,7 +49,6 @@ public class PlayerAnimationService {
         if (shouldChangeSkeleton(nextAnimation)) {
             changeSkeleton(nextAnimation.getDirection());
         }
-        flipImage(nextAnimation.getDirection());
         playerStatus.setAnimation(nextAnimation.getAnimation());
         changeAnimation(nextAnimation.getAnimation());
     }
@@ -81,8 +80,8 @@ public class PlayerAnimationService {
 
     private boolean shouldChangeSkeleton(QueuedAnimation nextAnimation) {
         boolean animationRequireSpecificDirection = !Direction.Empty.equals(nextAnimation.getDirection());
-        boolean usesSameSkeleton = playerStatus.getDirection().skeletonName().equals(nextAnimation.getDirection().skeletonName());
-        return animationRequireSpecificDirection && !usesSameSkeleton;
+        boolean usesSame = playerStatus.getDirection().equals(nextAnimation.getDirection());
+        return animationRequireSpecificDirection && !usesSame;
     }
 
     private void changeSkeleton(Direction direction) {
@@ -90,6 +89,7 @@ public class PlayerAnimationService {
         spineObjectComponent.skeletonData = spineObjectComponent.skeletonJson.readSkeletonData(skeletonFile);
         spineObjectComponent.skeleton = new Skeleton(spineObjectComponent.skeletonData);
         spineObjectComponent.getState().setData(new AnimationStateData(spineObjectComponent.skeletonData));
+        flipImage(direction);
         playerStatus.setDirection(direction);
     }
 
