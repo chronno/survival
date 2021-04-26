@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.chronno.survival.game.model.WorldObject;
+import com.esotericsoftware.minlog.Log;
 import games.rednblack.editor.renderer.SceneLoader;
 import games.rednblack.editor.renderer.resources.AsyncResourceManager;
 import games.rednblack.editor.renderer.resources.ResourceManagerLoader;
@@ -32,6 +33,7 @@ public class ProjectLoader {
         assetManager.load(filename, AsyncResourceManager.class);
         assetManager.finishLoading();
         asyncResourceManager = assetManager.get(filename, AsyncResourceManager.class);
+
         sceneLoader = new SceneLoader(asyncResourceManager);
         engine = sceneLoader.getEngine();
         sceneLoader.injectExternalItemType(new SpineItemType());
@@ -39,7 +41,7 @@ public class ProjectLoader {
 
     public void init(String sceneName) {
         sceneLoader.loadScene("MainScene", viewport);
-        worldObject = new WorldObject(sceneLoader.getRoot(), engine);
+        worldObject = new WorldObject(sceneLoader.getRoot(), engine, this);
     }
 
     public void update() {
@@ -47,7 +49,13 @@ public class ProjectLoader {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         orthographicCamera.update();
         viewport.apply();
-        engine.update(Gdx.graphics.getDeltaTime());
+        try {
+            engine.update(Gdx.graphics.getDeltaTime());
+        } catch (Exception e) {
+            e.printStackTrace();
+            //engine.update(Gdx.graphics.getDeltaTime());
+        }
+
     }
 
     public void dispose() {
@@ -58,5 +66,9 @@ public class ProjectLoader {
 
     public WorldObject getRootItem() {
         return this.worldObject;
+    }
+
+    public AsyncResourceManager getResourceManager() {
+        return this.asyncResourceManager;
     }
 }
