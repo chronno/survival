@@ -1,8 +1,7 @@
 package com.chronno.survival.network.client;
 
-import com.chronno.survival.network.exception.CommunicationException;
 import com.chronno.survival.network.messaging.Message;
-import com.chronno.survival.network.server.MessageInterpreter;
+import com.chronno.survival.network.messaging.MessageInterpreter;
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
 import com.esotericsoftware.minlog.Log;

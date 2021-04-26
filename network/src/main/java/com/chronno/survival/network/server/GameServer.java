@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 import com.chronno.survival.network.exception.ServerStartupException;
+import com.chronno.survival.network.messaging.MessageInterpreter;
 import com.chronno.survival.network.messaging.MessageRegistry;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Server;

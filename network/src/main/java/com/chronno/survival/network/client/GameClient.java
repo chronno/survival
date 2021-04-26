@@ -5,10 +5,9 @@ import java.util.Optional;
 
 import com.chronno.survival.network.exception.ClientConnectionException;
 import com.chronno.survival.network.messaging.MessageRegistry;
-import com.chronno.survival.network.server.MessageInterpreter;
+import com.chronno.survival.network.messaging.MessageInterpreter;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Client;
-import com.esotericsoftware.kryonet.Listener;
 import com.esotericsoftware.minlog.Log;
 
 public class GameClient {
