@@ -1,11 +1,11 @@
 {
 "skeleton": {
-	"hash": "RVv4r1FPR9x1xNeRpZXuEWkkG+w",
+	"hash": "eDJ35nkVBNWGiCYpQ9fscjRGR/o",
 	"spine": "3.8.75",
-	"x": -83.83,
-	"y": -81.84,
-	"width": 312.79,
-	"height": 262.67,
+	"x": -256.03,
+	"y": -205.58,
+	"width": 512,
+	"height": 512,
 	"images": "./Images/",
 	"audio": ""
 },
@@ -142,49 +142,50 @@
 	}
 ],
 "slots": [
+	{ "name": "crop default", "bone": "root", "attachment": "crop box" },
 	{ "name": "left lower arm", "bone": "left lower arm", "attachment": "Body/Side/side_L_lower_arm" },
-	{ "name": "__left lower arm slot", "bone": "left lower arm", "attachment": "Equipment Side/Shirts/sprite_side_L_lower_arm" },
+	{ "name": "__left lower arm slot", "bone": "left lower arm", "attachment": "Equipment Side/Shirts/cloth_side_L_lower_arm" },
 	{ "name": "left hand", "bone": "left hand", "attachment": "Body/Side/side_L_hand" },
-	{ "name": "__left hand slot", "bone": "left hand", "attachment": "Equipment Side/Gloves/sprite_side_L_hand" },
+	{ "name": "__left hand slot", "bone": "left hand", "attachment": "Equipment Side/Gloves/glove_side_L_hand" },
 	{ "name": "left shoulder", "bone": "left shoulder", "attachment": "Body/Side/side_L_upper_arm" },
-	{ "name": "__left upper arm slot", "bone": "left shoulder", "attachment": "Equipment Side/Shirts/sprite_side_L_upper_arm" },
-	{ "name": "__left shoulder slot", "bone": "left shoulder", "attachment": "Equipment Side/Shoulder Pads/sprite_side_L" },
+	{ "name": "__left upper arm slot", "bone": "left shoulder", "attachment": "Equipment Side/Shirts/cloth_side_L_upper_arm" },
+	{ "name": "__left shoulder slot", "bone": "left shoulder", "attachment": "Equipment Side/Shoulder Pads/shoulderpad_1_side_L" },
 	{ "name": "left foot", "bone": "left foot", "attachment": "Body/Side/side_L_foot" },
-	{ "name": "__left foot slot", "bone": "left foot", "attachment": "Equipment Side/Shoes/sprite_side_L_foot" },
+	{ "name": "__left foot slot", "bone": "left foot", "attachment": "Equipment Side/Shoes/boot_side_L_foot" },
 	{ "name": "left lower leg", "bone": "left lower leg", "attachment": "Body/Side/side_L_lower_leg" },
-	{ "name": "__left lower leg slot", "bone": "left lower leg", "attachment": "Equipment Side/Shoes/sprite_side_L_lower_leg" },
+	{ "name": "__left lower leg slot", "bone": "left lower leg", "attachment": "Equipment Side/Shoes/boot_flap_side_L_lower_leg" },
 	{ "name": "left upper leg", "bone": "left upper leg", "attachment": "Body/Side/side_L_upper_leg" },
-	{ "name": "__left upper leg slot", "bone": "left upper leg", "attachment": "Equipment Side/Pants/sprite_side_L_upper_leg" },
+	{ "name": "__left upper leg slot", "bone": "left upper leg", "attachment": "Equipment Side/Pants/cloth_side_L_upper_leg" },
 	{ "name": "body", "bone": "body", "attachment": "Body/Side/side_body" },
-	{ "name": "__hip slot", "bone": "body", "attachment": "Equipment Side/Pants/sprite_side_hip" },
+	{ "name": "__hip slot", "bone": "body", "attachment": "Equipment Side/Pants/cloth_side_hip" },
 	{ "name": "chest", "bone": "chest", "attachment": "Body/Side/side_chest" },
 	{ "name": "right foot", "bone": "right foot", "attachment": "Body/Side/side_R_foot" },
-	{ "name": "__right foot slot", "bone": "right foot", "attachment": "Equipment Side/Shoes/sprite_side_R_foot" },
+	{ "name": "__right foot slot", "bone": "right foot", "attachment": "Equipment Side/Shoes/boot_side_R_foot" },
 	{ "name": "right lower leg", "bone": "right lower leg", "attachment": "Body/Side/side_R_lower_leg" },
-	{ "name": "__right lower leg slot", "bone": "right lower leg", "attachment": "Equipment Side/Shoes/sprite_side_R_lower_leg" },
+	{ "name": "__right lower leg slot", "bone": "right lower leg", "attachment": "Equipment Side/Shoes/boot_flap_side_R_lower_leg" },
 	{ "name": "right upper leg", "bone": "right upper leg", "attachment": "Body/Side/side_R_upper_leg" },
-	{ "name": "__right upper leg slot", "bone": "right upper leg", "attachment": "Equipment Side/Pants/sprite_side_R_upper_leg" },
-	{ "name": "__body slot", "bone": "body", "attachment": "Equipment Side/Armours/sprite_side_body" },
-	{ "name": "__chest slot", "bone": "chest", "attachment": "Equipment Side/Armours/sprite_side_chest" },
-	{ "name": "__belt slot", "bone": "body", "attachment": "Equipment Side/Belts/sprite_side" },
+	{ "name": "__right upper leg slot", "bone": "right upper leg", "attachment": "Equipment Side/Pants/cloth_side_R_upper_leg" },
+	{ "name": "__body slot", "bone": "body", "attachment": "Equipment Side/Armours/armour_1_side_body" },
+	{ "name": "__chest slot", "bone": "chest", "attachment": "Equipment Side/Armours/armour_1_side_chest" },
+	{ "name": "__belt slot", "bone": "body", "attachment": "Equipment Side/Belts/belt_4_side" },
 	{ "name": "__bow weapon effect", "bone": "bow", "color": "ffffff00", "attachment": "Weapon Objects/bow_effect" },
-	{ "name": "__bow weapon slot", "bone": "bow", "color": "ffffff00", "attachment": "Weapon Objects/bow_sprite" },
-	{ "name": "__thrust weapon slot", "bone": "right hand", "color": "ffffff00", "attachment": "Weapon Objects/thrust_sprite" },
+	{ "name": "__bow weapon slot", "bone": "bow", "color": "ffffff00", "attachment": "Weapon Objects/bow_2" },
+	{ "name": "__thrust weapon slot", "bone": "right hand", "color": "ffffff00", "attachment": "Weapon Objects/thrust_spear_2" },
 	{ "name": "right lower arm", "bone": "right lower arm", "attachment": "Body/Side/side_R_lower_arm" },
-	{ "name": "__right lower arm slot", "bone": "right lower arm", "attachment": "Equipment Side/Shirts/sprite_side_R_lower_arm" },
+	{ "name": "__right lower arm slot", "bone": "right lower arm" },
 	{ "name": "right hand", "bone": "right hand", "attachment": "Body/Side/side_R_hand" },
-	{ "name": "__right hand slot", "bone": "right hand", "attachment": "Equipment Side/Gloves/sprite_side_R_hand" },
+	{ "name": "__right hand slot", "bone": "right hand", "attachment": "Equipment Side/Gloves/glove_side_R_hand" },
 	{ "name": "right upper arm", "bone": "right shoulder", "attachment": "Body/Side/side_R_upper_arm" },
-	{ "name": "__right upper arm slot", "bone": "right shoulder", "attachment": "Equipment Side/Shirts/sprite_side_R_upper_arm" },
-	{ "name": "__right shoulder slot", "bone": "right shoulder", "attachment": "Equipment Side/Shoulder Pads/sprite_side_R" },
+	{ "name": "__right upper arm slot", "bone": "right shoulder", "attachment": "Equipment Side/Shirts/cloth_side_R_upper_arm" },
+	{ "name": "__right shoulder slot", "bone": "right shoulder", "attachment": "Equipment Side/Shoulder Pads/shoulderpad_1_side_R" },
 	{ "name": "head", "bone": "head", "attachment": "Body/Side/side_head" },
 	{ "name": "eyes closed", "bone": "head", "color": "ffffff00", "attachment": "Body/Side/side_eyes_closed" },
 	{ "name": "eyes", "bone": "head", "attachment": "Body/Side/side_eyes" },
 	{ "name": "eyebrow", "bone": "head", "attachment": "Body/Side/side_eyebrow" },
-	{ "name": "__facial hair slot", "bone": "head", "attachment": "Head Objects/Facial Hair/sprite_side" },
-	{ "name": "__hair slot", "bone": "head", "attachment": "Head Objects/Hair/sprite_side" },
-	{ "name": "__headwear slot", "bone": "head", "attachment": "Head Objects/Headwear/sprite_side" },
-	{ "name": "__swing weapon slot", "bone": "right hand", "color": "ffffff00", "attachment": "Weapon Objects/swing_sprite" },
+	{ "name": "__facial hair slot", "bone": "head", "attachment": "Head Objects/Facial Hair/facial_hair_6_side" },
+	{ "name": "__hair slot", "bone": "head", "attachment": "Head Objects/Hair/hair_1_side" },
+	{ "name": "__headwear slot", "bone": "head", "attachment": "Head Objects/Headwear/helm_3_side" },
+	{ "name": "__swing weapon slot", "bone": "right hand", "color": "ffffff00", "attachment": "Weapon Objects/swing_sword_3" },
 	{ "name": "swing effect", "bone": "root", "color": "ffffff00", "attachment": "Weapon Objects/swing_effect" },
 	{ "name": "thrust effect", "bone": "root", "color": "ffffff00", "attachment": "Weapon Objects/thrust_effect" }
 ],
@@ -192,85 +193,103 @@
 	{
 		"name": "default",
 		"attachments": {
-			"__swing weapon slot": {
-				"Weapon Objects/swing_sprite": { "x": 13.1, "y": 64.11, "width": 16, "height": 16 }
+			"crop default": {
+				"crop box": { "color": "ffffff00", "x": -0.03, "y": 50.42, "width": 512, "height": 512 }
+			}
+		}
+	},
+	{
+		"name": "Facial Hair",
+		"attachments": {
+			"__facial hair slot": {
+				"Head Objects/Facial Hair/facial_hair_6_side": { "name": "Head Objects/Facial Hair/facial_hair_4_side", "x": 9.04, "y": -7.96, "rotation": -91.18, "width": 91, "height": 91 }
 			},
+			"eyebrow": {
+				"Body/Side/side_eyebrow": { "name": "Body/Side/side_eyebrow_3", "x": 34.64, "y": -24.35, "rotation": -90, "width": 41, "height": 32 }
+			}
+		}
+	},
+	{
+		"name": "Head",
+		"attachments": {
+			"head": {
+				"Body/Side/side_head": { "x": 35.14, "y": -10.85, "rotation": -90, "width": 98, "height": 95 }
+			},
+			"eyes": {
+				"Body/Side/side_eyes": { "name": "Body/Side/side_eyes_3", "x": 19.48, "y": -21.31, "rotation": -90, "width": 17, "height": 18 }
+			},
+			"eyes closed": {
+				"Body/Side/side_eyes_closed": { "x": 18.64, "y": -21.35, "rotation": -90, "width": 19, "height": 20 }
+			}
+		}
+	},
+	{
+		"name": "Headwear",
+		"attachments": {
+			"__hair slot": {
+				"Head Objects/Hair/hair_1_side": { "name": "Head Objects/Hair/hair_8_side", "x": 64.47, "y": -8.4, "rotation": -91.18, "width": 180, "height": 180 }
+			},
+			"__headwear slot": {
+				"Head Objects/Headwear/helm_3_side": { "x": 65.7, "y": -8.26, "rotation": -91.18, "width": 180, "height": 180 }
+			}
+		}
+	},
+	{
+		"name": "Leather Equipment",
+		"attachments": {
 			"chest": {
 				"Body/Side/side_chest": { "x": 9.77, "y": 0.14, "rotation": -94.15, "width": 65, "height": 63 }
 			},
-			"__left shoulder slot": {
-				"Equipment Side/Shoulder Pads/sprite_side_L": { "x": -2.94, "y": 3.86, "rotation": 98.61, "width": 16, "height": 16 }
-			},
-			"__right hand slot": {
-				"Equipment Side/Gloves/sprite_side_R_hand": { "x": 4.85, "y": 1.22, "rotation": 50.15, "width": 16, "height": 16 }
-			},
-			"__hair slot": {
-				"Head Objects/Hair/sprite_side": { "x": 64.47, "y": -8.4, "rotation": -91.18, "width": 16, "height": 16 }
-			},
 			"__bow weapon slot": {
-				"Weapon Objects/bow_sprite": {
+				"Weapon Objects/bow_2": {
+					"name": "Weapon Objects/bow_1",
 					"x": -19.64,
 					"y": 3.55,
 					"scaleX": 1.0044,
 					"scaleY": 1.0044,
 					"rotation": -0.03,
-					"width": 16,
-					"height": 16
+					"width": 113,
+					"height": 159
 				}
 			},
-			"__left upper leg slot": {
-				"Equipment Side/Pants/sprite_side_L_upper_leg": { "x": 15.11, "y": -0.48, "rotation": 73.26, "width": 16, "height": 16 }
+			"left hand": {
+				"Body/Side/side_L_hand": { "x": 9, "y": 2.86, "rotation": 64.4, "width": 31, "height": 32 }
 			},
-			"__left upper arm slot": {
-				"Equipment Side/Shirts/sprite_side_L_upper_arm": { "x": 9.67, "y": -0.2, "rotation": 105.78, "width": 16, "height": 16 }
-			},
-			"__right foot slot": {
-				"Equipment Side/Shoes/sprite_side_R_foot": { "x": 13.45, "y": 0.26, "rotation": 42.92, "width": 16, "height": 16 }
-			},
-			"__right shoulder slot": {
-				"Equipment Side/Shoulder Pads/sprite_side_R": { "x": 3.99, "y": -1.75, "rotation": 117.11, "width": 16, "height": 16 }
-			},
-			"__hip slot": {
-				"Equipment Side/Pants/sprite_side_hip": { "x": 14.36, "y": -4.22, "rotation": -85.93, "width": 16, "height": 16 }
-			},
-			"left upper leg": {
-				"Body/Side/side_L_upper_leg": { "x": 14.61, "y": -0.18, "rotation": 70.73, "width": 27, "height": 39 }
-			},
-			"swing effect": {
-				"Weapon Objects/swing_effect": { "x": 102.57, "y": 49.49, "scaleX": 0.8785, "scaleY": 0.8785, "width": 168, "height": 299 }
-			},
-			"eyes": {
-				"Body/Side/side_eyes": { "x": 19.48, "y": -21.31, "rotation": -90, "width": 17, "height": 18 }
-			},
-			"__belt slot": {
-				"Equipment Side/Belts/sprite_side": { "x": 6, "y": -6.69, "rotation": -85.93, "width": 16, "height": 16 }
-			},
-			"__left hand slot": {
-				"Equipment Side/Gloves/sprite_side_L_hand": { "x": 7, "y": 2.31, "rotation": 63.83, "width": 16, "height": 16 }
+			"__left lower arm slot": {
+				"Equipment Side/Shirts/cloth_side_L_lower_arm": { "x": 7.23, "y": 0.26, "rotation": 69.32, "width": 35, "height": 35 }
 			},
 			"left shoulder": {
 				"Body/Side/side_L_upper_arm": { "x": 9.13, "y": 2.71, "rotation": 105.95, "width": 29, "height": 38 }
 			},
-			"__left lower arm slot": {
-				"Equipment Side/Shirts/sprite_side_L_lower_arm": { "x": 7.23, "y": 0.26, "rotation": 69.32, "width": 16, "height": 16 }
+			"__right foot slot": {
+				"Equipment Side/Shoes/boot_side_R_foot": { "name": "Equipment Side/Shoes/armour_side_R_foot", "x": 13.45, "y": 0.26, "rotation": 42.92, "width": 56, "height": 45 }
 			},
-			"__facial hair slot": {
-				"Head Objects/Facial Hair/sprite_side": { "x": 9.07, "y": -7.96, "rotation": -91.18, "width": 16, "height": 16 }
+			"__hip slot": {
+				"Equipment Side/Pants/cloth_side_hip": { "x": 14.36, "y": -4.22, "rotation": -85.93, "width": 79, "height": 86 }
+			},
+			"left upper leg": {
+				"Body/Side/side_L_upper_leg": { "x": 14.61, "y": -0.18, "rotation": 70.73, "width": 27, "height": 39 }
+			},
+			"__belt slot": {
+				"Equipment Side/Belts/belt_4_side": { "name": "Equipment Side/Belts/belt_1_side", "x": 6, "y": -6.69, "rotation": -85.93, "width": 63, "height": 56 }
+			},
+			"__left hand slot": {
+				"Equipment Side/Gloves/glove_side_L_hand": { "name": "Equipment Side/Gloves/fingerless_side_L_hand", "x": 7, "y": 2.31, "rotation": 63.83, "width": 55, "height": 55 }
+			},
+			"__left upper arm slot": {
+				"Equipment Side/Shirts/cloth_side_L_upper_arm": { "name": "Equipment Side/Shirts/shirt_side_L_upper_arm", "x": 9.67, "y": -0.2, "rotation": 105.78, "width": 45, "height": 45 }
+			},
+			"__right shoulder slot": {
+				"Equipment Side/Shoulder Pads/shoulderpad_1_side_R": { "name": "Equipment Side/Shoulder Pads/shoulderpad_2_side_R", "x": 3.99, "y": -1.75, "rotation": 117.11, "width": 53, "height": 53 }
 			},
 			"__body slot": {
-				"Equipment Side/Armours/sprite_side_body": { "x": 13.89, "y": -4.56, "rotation": -85.93, "width": 16, "height": 16 }
+				"Equipment Side/Armours/armour_1_side_body": { "name": "Equipment Side/Shirts/shirt_side_body", "x": 13.89, "y": -4.56, "rotation": -85.93, "width": 79, "height": 86 }
 			},
 			"__chest slot": {
-				"Equipment Side/Armours/sprite_side_chest": { "x": 8.64, "y": -2.36, "rotation": -95.33, "width": 16, "height": 16 }
-			},
-			"__thrust weapon slot": {
-				"Weapon Objects/thrust_sprite": { "x": 39.79, "y": 39.49, "rotation": -39.72, "width": 16, "height": 16 }
+				"Equipment Side/Armours/armour_1_side_chest": { "name": "Equipment Side/Shirts/shirt_side_chest", "x": 8.64, "y": -2.36, "rotation": -95.33, "width": 79, "height": 71 }
 			},
 			"__bow weapon effect": {
 				"Weapon Objects/bow_effect": { "x": -62.67, "y": -1.27, "width": 59, "height": 117 }
-			},
-			"head": {
-				"Body/Side/side_head": { "x": 35.14, "y": -10.85, "rotation": -90, "width": 98, "height": 95 }
 			},
 			"right upper leg": {
 				"Body/Side/side_R_upper_leg": { "x": 14.17, "y": 1.41, "rotation": 74.74, "width": 30, "height": 40 }
@@ -278,32 +297,23 @@
 			"body": {
 				"Body/Side/side_body": { "x": 19.15, "y": -1.25, "rotation": -86.6, "width": 91, "height": 67 }
 			},
-			"thrust effect": {
-				"Weapon Objects/thrust_effect": { "x": 150.95, "y": 37.89, "rotation": -90, "width": 69, "height": 156 }
-			},
-			"__right upper leg slot": {
-				"Equipment Side/Pants/sprite_side_R_upper_leg": { "x": 14.28, "y": 1.04, "rotation": 74.26, "width": 16, "height": 16 }
-			},
-			"__right lower arm slot": {
-				"Equipment Side/Shirts/sprite_side_R_lower_arm": { "x": 7.76, "y": 0.69, "rotation": 63.92, "width": 16, "height": 16 }
-			},
-			"__left lower leg slot": {
-				"Equipment Side/Shoes/sprite_side_L_lower_leg": { "x": 3.51, "y": -0.15, "rotation": 99.54, "width": 16, "height": 16 }
-			},
-			"left foot": {
-				"Body/Side/side_L_foot": { "x": 10.89, "y": -3.1, "rotation": 17.15, "width": 40, "height": 23 }
-			},
-			"left hand": {
-				"Body/Side/side_L_hand": { "x": 9, "y": 2.86, "rotation": 64.4, "width": 31, "height": 32 }
-			},
-			"eyebrow": {
-				"Body/Side/side_eyebrow": { "x": 34.64, "y": -24.35, "rotation": -90, "width": 41, "height": 32 }
-			},
-			"eyes closed": {
-				"Body/Side/side_eyes_closed": { "x": 18.64, "y": -21.35, "rotation": -90, "width": 19, "height": 20 }
-			},
 			"right lower leg": {
 				"Body/Side/side_R_lower_leg": { "x": 6.04, "y": 0.73, "rotation": 111.92, "width": 22, "height": 24 }
+			},
+			"__right upper arm slot": {
+				"Equipment Side/Shirts/cloth_side_R_upper_arm": { "name": "Equipment Side/Shirts/shirt_side_R_upper_arm", "x": 15.35, "y": -0.76, "rotation": 111.22, "width": 45, "height": 45 }
+			},
+			"__right lower arm slot": {
+				"Equipment Side/Shirts/cloth_side_R_lower_arm": { "x": 7.76, "y": 0.69, "rotation": 63.92, "width": 35, "height": 35 }
+			},
+			"__left upper leg slot": {
+				"Equipment Side/Pants/cloth_side_L_upper_leg": { "x": 15.11, "y": -0.48, "rotation": 73.26, "width": 44, "height": 44 }
+			},
+			"__left lower leg slot": {
+				"Equipment Side/Shoes/boot_flap_side_L_lower_leg": { "name": "Equipment Side/Pants/scalemail_side_L_lower_leg", "x": 3.51, "y": -0.15, "rotation": 99.54, "width": 36, "height": 36 }
+			},
+			"__right hand slot": {
+				"Equipment Side/Gloves/glove_side_R_hand": { "name": "Equipment Side/Gloves/fingerless_side_R_hand", "x": 4.85, "y": 1.22, "rotation": 49.55, "width": 55, "height": 55 }
 			},
 			"right hand": {
 				"Body/Side/side_R_hand": { "x": 7.72, "y": 1.81, "rotation": 55.56, "width": 34, "height": 32 }
@@ -311,20 +321,20 @@
 			"left lower leg": {
 				"Body/Side/side_L_lower_leg": { "x": 5.46, "y": -0.18, "rotation": 97.02, "width": 20, "height": 22 }
 			},
-			"right foot": {
-				"Body/Side/side_R_foot": { "x": 15.26, "y": -0.69, "rotation": 40.07, "width": 40, "height": 39 }
+			"__left shoulder slot": {
+				"Equipment Side/Shoulder Pads/shoulderpad_1_side_L": { "name": "Equipment Side/Shoulder Pads/shoulderpad_2_side_L", "x": -2.94, "y": 3.86, "rotation": 98.61, "width": 53, "height": 53 }
+			},
+			"__right upper leg slot": {
+				"Equipment Side/Pants/cloth_side_R_upper_leg": { "x": 14.28, "y": 1.04, "rotation": 74.26, "width": 44, "height": 44 }
 			},
 			"__right lower leg slot": {
-				"Equipment Side/Shoes/sprite_side_R_lower_leg": { "x": 5.94, "y": 0.4, "rotation": 105.63, "width": 16, "height": 16 }
+				"Equipment Side/Shoes/boot_flap_side_R_lower_leg": { "name": "Equipment Side/Pants/scalemail_side_R_lower_leg", "x": 5.94, "y": 0.4, "rotation": 105.63, "width": 36, "height": 36 }
 			},
 			"left lower arm": {
 				"Body/Side/side_L_lower_arm": { "x": 8.55, "y": 0.77, "rotation": 69.15, "width": 23, "height": 33 }
 			},
-			"__headwear slot": {
-				"Head Objects/Headwear/sprite_side": { "x": 65.7, "y": -8.26, "rotation": -91.18, "width": 16, "height": 16 }
-			},
 			"__left foot slot": {
-				"Equipment Side/Shoes/sprite_side_L_foot": { "x": 12.21, "y": -2.7, "rotation": 18.18, "width": 16, "height": 16 }
+				"Equipment Side/Shoes/boot_side_L_foot": { "name": "Equipment Side/Shoes/armour_side_L_foot", "x": 12.21, "y": -2.7, "rotation": 18.18, "width": 56, "height": 38 }
 			},
 			"right upper arm": {
 				"Body/Side/side_R_upper_arm": { "x": 15.24, "y": 1.26, "rotation": 111.32, "width": 29, "height": 40 }
@@ -332,8 +342,321 @@
 			"right lower arm": {
 				"Body/Side/side_R_lower_arm": { "x": 8.71, "y": 1.54, "rotation": 63.62, "width": 23, "height": 33 }
 			},
+			"left foot": {
+				"Body/Side/side_L_foot": { "x": 10.89, "y": -3.1, "rotation": 17.15, "width": 40, "height": 23 }
+			},
+			"right foot": {
+				"Body/Side/side_R_foot": { "x": 15.26, "y": -0.69, "rotation": 40.07, "width": 40, "height": 39 }
+			}
+		}
+	},
+	{
+		"name": "Nake Body",
+		"attachments": {
+			"chest": {
+				"Body/Side/side_chest": { "x": 9.77, "y": 0.14, "rotation": -94.15, "width": 65, "height": 63 }
+			},
+			"__bow weapon slot": {
+				"Weapon Objects/bow_2": {
+					"x": -19.64,
+					"y": 3.55,
+					"scaleX": 1.0044,
+					"scaleY": 1.0044,
+					"rotation": -0.03,
+					"width": 113,
+					"height": 159
+				}
+			},
+			"right upper leg": {
+				"Body/Side/side_R_upper_leg": { "x": 14.17, "y": 1.41, "rotation": 74.74, "width": 30, "height": 40 }
+			},
+			"left lower leg": {
+				"Body/Side/side_L_lower_leg": { "x": 5.46, "y": -0.18, "rotation": 97.02, "width": 20, "height": 22 }
+			},
+			"left shoulder": {
+				"Body/Side/side_L_upper_arm": { "x": 9.13, "y": 2.71, "rotation": 105.95, "width": 29, "height": 38 }
+			},
+			"right upper arm": {
+				"Body/Side/side_R_upper_arm": { "x": 15.24, "y": 1.26, "rotation": 111.32, "width": 29, "height": 40 }
+			},
+			"__bow weapon effect": {
+				"Weapon Objects/bow_effect": { "x": -62.67, "y": -1.27, "width": 59, "height": 117 }
+			},
+			"body": {
+				"Body/Side/side_body": { "x": 19.15, "y": -1.25, "rotation": -86.6, "width": 91, "height": 67 }
+			},
+			"left lower arm": {
+				"Body/Side/side_L_lower_arm": { "x": 8.55, "y": 0.77, "rotation": 69.15, "width": 23, "height": 33 }
+			},
+			"left foot": {
+				"Body/Side/side_L_foot": { "x": 10.89, "y": -3.1, "rotation": 17.15, "width": 40, "height": 23 }
+			},
+			"left hand": {
+				"Body/Side/side_L_hand": { "x": 9, "y": 2.86, "rotation": 64.4, "width": 31, "height": 32 }
+			},
+			"right lower leg": {
+				"Body/Side/side_R_lower_leg": { "x": 6.04, "y": 0.73, "rotation": 111.92, "width": 22, "height": 24 }
+			},
+			"right foot": {
+				"Body/Side/side_R_foot": { "x": 15.26, "y": -0.69, "rotation": 40.07, "width": 40, "height": 39 }
+			},
+			"right hand": {
+				"Body/Side/side_R_hand": { "x": 7.72, "y": 1.81, "rotation": 55.56, "width": 34, "height": 32 }
+			},
+			"left upper leg": {
+				"Body/Side/side_L_upper_leg": { "x": 14.61, "y": -0.18, "rotation": 70.73, "width": 27, "height": 39 }
+			},
+			"right lower arm": {
+				"Body/Side/side_R_lower_arm": { "x": 8.71, "y": 1.54, "rotation": 63.62, "width": 23, "height": 33 }
+			}
+		}
+	},
+	{
+		"name": "Plate Equipment",
+		"attachments": {
+			"chest": {
+				"Body/Side/side_chest": { "x": 9.77, "y": 0.14, "rotation": -94.15, "width": 65, "height": 63 }
+			},
+			"__bow weapon slot": {
+				"Weapon Objects/bow_2": {
+					"x": -19.64,
+					"y": 3.55,
+					"scaleX": 1.0044,
+					"scaleY": 1.0044,
+					"rotation": -0.03,
+					"width": 113,
+					"height": 159
+				}
+			},
+			"left hand": {
+				"Body/Side/side_L_hand": { "x": 9, "y": 2.86, "rotation": 64.4, "width": 31, "height": 32 }
+			},
+			"__left lower arm slot": {
+				"Equipment Side/Shirts/cloth_side_L_lower_arm": { "name": "Equipment Side/Shirts/scalemail_side_L_lower_arm", "x": 7.23, "y": 0.26, "rotation": 69.32, "width": 35, "height": 35 }
+			},
+			"left shoulder": {
+				"Body/Side/side_L_upper_arm": { "x": 9.13, "y": 2.71, "rotation": 105.95, "width": 29, "height": 38 }
+			},
+			"__right foot slot": {
+				"Equipment Side/Shoes/boot_side_R_foot": { "name": "Equipment Side/Shoes/armour_side_R_foot", "x": 13.45, "y": 0.26, "rotation": 42.92, "width": 56, "height": 45 }
+			},
+			"__hip slot": {
+				"Equipment Side/Pants/cloth_side_hip": { "name": "Equipment Side/Pants/scalemail_side_hip", "x": 14.36, "y": -4.22, "rotation": -85.93, "width": 79, "height": 86 }
+			},
+			"left upper leg": {
+				"Body/Side/side_L_upper_leg": { "x": 14.61, "y": -0.18, "rotation": 70.73, "width": 27, "height": 39 }
+			},
+			"__belt slot": {
+				"Equipment Side/Belts/belt_4_side": { "x": 6, "y": -6.69, "rotation": -85.93, "width": 63, "height": 56 }
+			},
+			"__left hand slot": {
+				"Equipment Side/Gloves/glove_side_L_hand": { "name": "Equipment Side/Gloves/gauntlet_side_L_hand", "x": 7, "y": 2.31, "rotation": 63.83, "width": 55, "height": 55 }
+			},
+			"__left upper arm slot": {
+				"Equipment Side/Shirts/cloth_side_L_upper_arm": { "name": "Equipment Side/Shirts/scalemail_side_L_upper_arm", "x": 9.67, "y": -0.2, "rotation": 105.78, "width": 45, "height": 45 }
+			},
+			"__right shoulder slot": {
+				"Equipment Side/Shoulder Pads/shoulderpad_1_side_R": { "name": "Equipment Side/Shoulder Pads/shoulderpad_2_side_R", "x": 3.99, "y": -1.75, "rotation": 117.11, "width": 53, "height": 53 }
+			},
+			"__body slot": {
+				"Equipment Side/Armours/armour_1_side_body": { "name": "Equipment Side/Armours/armour_2_side_body", "x": 13.89, "y": -4.56, "rotation": -85.93, "width": 79, "height": 86 }
+			},
+			"__chest slot": {
+				"Equipment Side/Armours/armour_1_side_chest": { "name": "Equipment Side/Armours/armour_2_side_chest", "x": 8.64, "y": -2.36, "rotation": -95.33, "width": 79, "height": 71 }
+			},
+			"__bow weapon effect": {
+				"Weapon Objects/bow_effect": { "x": -62.67, "y": -1.27, "width": 59, "height": 117 }
+			},
+			"right upper leg": {
+				"Body/Side/side_R_upper_leg": { "x": 14.17, "y": 1.41, "rotation": 74.74, "width": 30, "height": 40 }
+			},
+			"body": {
+				"Body/Side/side_body": { "x": 19.15, "y": -1.25, "rotation": -86.6, "width": 91, "height": 67 }
+			},
+			"right lower leg": {
+				"Body/Side/side_R_lower_leg": { "x": 6.04, "y": 0.73, "rotation": 111.92, "width": 22, "height": 24 }
+			},
 			"__right upper arm slot": {
-				"Equipment Side/Shirts/sprite_side_R_upper_arm": { "x": 15.35, "y": -0.76, "rotation": 111.22, "width": 16, "height": 16 }
+				"Equipment Side/Shirts/cloth_side_R_upper_arm": { "name": "Equipment Side/Shirts/scalemail_side_R_upper_arm", "x": 15.35, "y": -0.76, "rotation": 111.22, "width": 45, "height": 45 }
+			},
+			"__right lower arm slot": {
+				"Equipment Side/Shirts/cloth_side_R_lower_arm": { "name": "Equipment Side/Shirts/scalemail_side_R_lower_arm", "x": 7.76, "y": 0.69, "rotation": 63.92, "width": 35, "height": 35 }
+			},
+			"__left upper leg slot": {
+				"Equipment Side/Pants/cloth_side_L_upper_leg": { "name": "Equipment Side/Pants/scalemail_side_L_upper_leg", "x": 15.11, "y": -0.48, "rotation": 73.26, "width": 44, "height": 44 }
+			},
+			"__left lower leg slot": {
+				"Equipment Side/Shoes/boot_flap_side_L_lower_leg": { "name": "Equipment Side/Shoes/armour_side_L_lower_leg", "x": 3.51, "y": -0.15, "rotation": 99.54, "width": 36, "height": 36 }
+			},
+			"__right hand slot": {
+				"Equipment Side/Gloves/glove_side_R_hand": { "name": "Equipment Side/Gloves/gauntlet_side_R_hand", "x": 4.85, "y": 1.22, "rotation": 50.15, "width": 55, "height": 55 }
+			},
+			"right hand": {
+				"Body/Side/side_R_hand": { "x": 7.72, "y": 1.81, "rotation": 55.56, "width": 34, "height": 32 }
+			},
+			"left lower leg": {
+				"Body/Side/side_L_lower_leg": { "x": 5.46, "y": -0.18, "rotation": 97.02, "width": 20, "height": 22 }
+			},
+			"__left shoulder slot": {
+				"Equipment Side/Shoulder Pads/shoulderpad_1_side_L": { "name": "Equipment Side/Shoulder Pads/shoulderpad_2_side_L", "x": -2.94, "y": 3.86, "rotation": 98.61, "width": 53, "height": 53 }
+			},
+			"__right upper leg slot": {
+				"Equipment Side/Pants/cloth_side_R_upper_leg": { "name": "Equipment Side/Pants/scalemail_side_R_upper_leg", "x": 14.28, "y": 1.04, "rotation": 74.26, "width": 44, "height": 44 }
+			},
+			"__right lower leg slot": {
+				"Equipment Side/Shoes/boot_flap_side_R_lower_leg": { "name": "Equipment Side/Shoes/armour_side_R_lower_leg", "x": 5.94, "y": 0.4, "rotation": 105.63, "width": 36, "height": 36 }
+			},
+			"left lower arm": {
+				"Body/Side/side_L_lower_arm": { "x": 8.55, "y": 0.77, "rotation": 69.15, "width": 23, "height": 33 }
+			},
+			"__left foot slot": {
+				"Equipment Side/Shoes/boot_side_L_foot": { "name": "Equipment Side/Shoes/armour_side_L_foot", "x": 12.21, "y": -2.7, "rotation": 18.18, "width": 56, "height": 38 }
+			},
+			"right upper arm": {
+				"Body/Side/side_R_upper_arm": { "x": 15.24, "y": 1.26, "rotation": 111.32, "width": 29, "height": 40 }
+			},
+			"right lower arm": {
+				"Body/Side/side_R_lower_arm": { "x": 8.71, "y": 1.54, "rotation": 63.62, "width": 23, "height": 33 }
+			},
+			"left foot": {
+				"Body/Side/side_L_foot": { "x": 10.89, "y": -3.1, "rotation": 17.15, "width": 40, "height": 23 }
+			},
+			"right foot": {
+				"Body/Side/side_R_foot": { "x": 15.26, "y": -0.69, "rotation": 40.07, "width": 40, "height": 39 }
+			}
+		}
+	},
+	{
+		"name": "Shirt Equipment",
+		"attachments": {
+			"chest": {
+				"Body/Side/side_chest": { "x": 9.77, "y": 0.14, "rotation": -94.15, "width": 65, "height": 63 }
+			},
+			"__left shoulder slot": {
+				"Equipment Side/Shoulder Pads/shoulderpad_1_side_L": { "name": "Equipment Side/Shoulder Pads/shoulderpad_4_side_L", "x": -2.94, "y": 3.86, "rotation": 98.61, "width": 53, "height": 53 }
+			},
+			"left hand": {
+				"Body/Side/side_L_hand": { "x": 9, "y": 2.86, "rotation": 64.4, "width": 31, "height": 32 }
+			},
+			"__bow weapon slot": {
+				"Weapon Objects/bow_2": {
+					"x": -19.64,
+					"y": 3.55,
+					"scaleX": 1.0044,
+					"scaleY": 1.0044,
+					"rotation": -0.03,
+					"width": 113,
+					"height": 159
+				}
+			},
+			"left shoulder": {
+				"Body/Side/side_L_upper_arm": { "x": 9.13, "y": 2.71, "rotation": 105.95, "width": 29, "height": 38 }
+			},
+			"__right foot slot": {
+				"Equipment Side/Shoes/boot_side_R_foot": { "name": "Equipment Side/Shoes/sandals_side_R_foot", "x": 13.45, "y": 0.26, "rotation": 42.92, "width": 56, "height": 45 }
+			},
+			"__hip slot": {
+				"Equipment Side/Pants/cloth_side_hip": { "name": "Equipment Side/Pants/scalemail_side_hip", "x": 14.36, "y": -4.22, "rotation": -85.93, "width": 79, "height": 86 }
+			},
+			"left upper leg": {
+				"Body/Side/side_L_upper_leg": { "x": 14.61, "y": -0.18, "rotation": 70.73, "width": 27, "height": 39 }
+			},
+			"__belt slot": {
+				"Equipment Side/Belts/belt_4_side": { "name": "Equipment Side/Belts/belt_3_side", "x": 6, "y": -6.69, "rotation": -85.93, "width": 63, "height": 56 }
+			},
+			"__left hand slot": {
+				"Equipment Side/Gloves/glove_side_L_hand": { "name": "Equipment Side/Gloves/gauntlet_side_L_hand", "x": 7, "y": 2.31, "rotation": 63.83, "width": 55, "height": 55 }
+			},
+			"__left upper arm slot": {
+				"Equipment Side/Shirts/cloth_side_L_upper_arm": { "name": "Equipment Side/Shirts/shirt_side_L_upper_arm", "x": 9.67, "y": -0.2, "rotation": 105.78, "width": 45, "height": 45 }
+			},
+			"__right shoulder slot": {
+				"Equipment Side/Shoulder Pads/shoulderpad_1_side_R": { "name": "Equipment Side/Shoulder Pads/shoulderpad_4_side_R", "x": 3.99, "y": -1.75, "rotation": 117.11, "width": 53, "height": 53 }
+			},
+			"__body slot": {
+				"Equipment Side/Armours/armour_1_side_body": { "name": "Equipment Side/Shirts/tunic_side_body", "x": 13.89, "y": -4.56, "rotation": -85.93, "width": 79, "height": 86 }
+			},
+			"__chest slot": {
+				"Equipment Side/Armours/armour_1_side_chest": { "name": "Equipment Side/Shirts/tunic_side_chest", "x": 8.64, "y": -2.36, "rotation": -95.33, "width": 79, "height": 71 }
+			},
+			"__bow weapon effect": {
+				"Weapon Objects/bow_effect": { "x": -62.67, "y": -1.27, "width": 59, "height": 117 }
+			},
+			"right upper leg": {
+				"Body/Side/side_R_upper_leg": { "x": 14.17, "y": 1.41, "rotation": 74.74, "width": 30, "height": 40 }
+			},
+			"body": {
+				"Body/Side/side_body": { "x": 19.15, "y": -1.25, "rotation": -86.6, "width": 91, "height": 67 }
+			},
+			"right lower leg": {
+				"Body/Side/side_R_lower_leg": { "x": 6.04, "y": 0.73, "rotation": 111.92, "width": 22, "height": 24 }
+			},
+			"__right upper arm slot": {
+				"Equipment Side/Shirts/cloth_side_R_upper_arm": { "name": "Equipment Side/Shirts/shirt_side_R_upper_arm", "x": 15.35, "y": -0.76, "rotation": 111.22, "width": 45, "height": 45 }
+			},
+			"__right lower arm slot": {
+				"Equipment Side/Shirts/cloth_side_R_lower_arm": { "x": 7.76, "y": 0.69, "rotation": 63.92, "width": 35, "height": 35 }
+			},
+			"__left upper leg slot": {
+				"Equipment Side/Pants/cloth_side_L_upper_leg": { "x": 15.11, "y": -0.48, "rotation": 73.26, "width": 44, "height": 44 }
+			},
+			"__left lower leg slot": {
+				"Equipment Side/Shoes/boot_flap_side_L_lower_leg": { "x": 3.51, "y": -0.15, "rotation": 99.54, "width": 36, "height": 36 }
+			},
+			"__right hand slot": {
+				"Equipment Side/Gloves/glove_side_R_hand": { "name": "Equipment Side/Gloves/gauntlet_side_R_hand", "x": 4.85, "y": 1.22, "rotation": 50.15, "width": 55, "height": 55 }
+			},
+			"right hand": {
+				"Body/Side/side_R_hand": { "x": 7.72, "y": 1.81, "rotation": 55.56, "width": 34, "height": 32 }
+			},
+			"left lower leg": {
+				"Body/Side/side_L_lower_leg": { "x": 5.46, "y": -0.18, "rotation": 97.02, "width": 20, "height": 22 }
+			},
+			"__right upper leg slot": {
+				"Equipment Side/Pants/cloth_side_R_upper_leg": { "name": "Equipment Side/Pants/scalemail_side_R_upper_leg", "x": 14.28, "y": 1.04, "rotation": 74.26, "width": 44, "height": 44 }
+			},
+			"__right lower leg slot": {
+				"Equipment Side/Shoes/boot_flap_side_R_lower_leg": { "x": 5.94, "y": 0.4, "rotation": 105.63, "width": 36, "height": 36 }
+			},
+			"left lower arm": {
+				"Body/Side/side_L_lower_arm": { "x": 8.55, "y": 0.77, "rotation": 69.15, "width": 23, "height": 33 }
+			},
+			"__left foot slot": {
+				"Equipment Side/Shoes/boot_side_L_foot": { "name": "Equipment Side/Shoes/sandals_side_L_foot", "x": 12.21, "y": -2.7, "rotation": 18.18, "width": 56, "height": 38 }
+			},
+			"right upper arm": {
+				"Body/Side/side_R_upper_arm": { "x": 15.24, "y": 1.26, "rotation": 111.32, "width": 29, "height": 40 }
+			},
+			"right lower arm": {
+				"Body/Side/side_R_lower_arm": { "x": 8.71, "y": 1.54, "rotation": 63.62, "width": 23, "height": 33 }
+			},
+			"left foot": {
+				"Body/Side/side_L_foot": { "x": 10.89, "y": -3.1, "rotation": 17.15, "width": 40, "height": 23 }
+			},
+			"right foot": {
+				"Body/Side/side_R_foot": { "x": 15.26, "y": -0.69, "rotation": 40.07, "width": 40, "height": 39 }
+			}
+		}
+	},
+	{
+		"name": "Swing",
+		"attachments": {
+			"__swing weapon slot": {
+				"Weapon Objects/swing_sword_3": { "name": "Weapon Objects/swing_sword_1", "x": 13.1, "y": 64.11, "width": 113, "height": 146 }
+			},
+			"swing effect": {
+				"Weapon Objects/swing_effect": { "x": 102.57, "y": 49.49, "scaleX": 0.8785, "scaleY": 0.8785, "width": 168, "height": 299 }
+			}
+		}
+	},
+	{
+		"name": "Thrust",
+		"attachments": {
+			"thrust effect": {
+				"Weapon Objects/thrust_effect": { "x": 150.95, "y": 37.89, "rotation": -90, "width": 69, "height": 156 }
+			},
+			"__thrust weapon slot": {
+				"Weapon Objects/thrust_spear_2": { "x": 39.79, "y": 39.49, "rotation": -39.72, "width": 100, "height": 228 }
 			}
 		}
 	}
@@ -351,7 +674,6 @@
 		"slots": {
 			"__bow weapon slot": {
 				"color": [
-					{ "time": 0.0333, "color": "ffffff00", "curve": "stepped" },
 					{ "time": 0.0667, "color": "ffffff00", "curve": 0.25, "c3": 0.75 },
 					{ "time": 0.1667, "color": "ffffffff", "curve": "stepped" },
 					{ "time": 0.5, "color": "ffffffff", "curve": 0.25, "c3": 0.75 },
@@ -459,23 +781,20 @@
 				]
 			}
 		},
-		"drawOrder": [
-			{}
-		],
 		"events": [
 			{ "time": 0.3333, "name": "bow" }
 		]
 	},
 	"Side Death": {
 		"slots": {
-			"eyes closed": {
-				"color": [
-					{ "time": 0.1667, "color": "ffffffff" }
-				]
-			},
 			"eyes": {
 				"color": [
 					{ "time": 0.1667, "color": "ffffff00" }
+				]
+			},
+			"eyes closed": {
+				"color": [
+					{ "time": 0.1667, "color": "ffffffff" }
 				]
 			}
 		},
@@ -660,16 +979,16 @@
 	},
 	"Side Hurt": {
 		"slots": {
-			"eyes closed": {
-				"color": [
-					{ "time": 0.0333, "color": "ffffffff", "curve": "stepped" },
-					{ "time": 0.3667, "color": "ffffff00" }
-				]
-			},
 			"eyes": {
 				"color": [
 					{ "time": 0.0333, "color": "ffffff00", "curve": "stepped" },
 					{ "time": 0.3667, "color": "ffffffff" }
+				]
+			},
+			"eyes closed": {
+				"color": [
+					{ "time": 0.0333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3667, "color": "ffffff00" }
 				]
 			}
 		},
@@ -1127,20 +1446,20 @@
 	},
 	"Side Swing": {
 		"slots": {
-			"__swing weapon slot": {
-				"color": [
-					{ "color": "ffffff00", "curve": "stepped" },
-					{ "time": 0.0333, "color": "ffffffff", "curve": "stepped" },
-					{ "time": 0.5, "color": "ffffffff", "curve": 0.25, "c3": 0.75 },
-					{ "time": 0.6, "color": "ffffff00" }
-				]
-			},
 			"swing effect": {
 				"color": [
 					{ "time": 0.2, "color": "ffffff00" },
 					{ "time": 0.2333, "color": "ffffffff", "curve": "stepped" },
 					{ "time": 0.3667, "color": "ffffffff", "curve": 0.25, "c3": 0.75 },
 					{ "time": 0.4667, "color": "ffffff00" }
+				]
+			},
+			"__swing weapon slot": {
+				"color": [
+					{ "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.0333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.5, "color": "ffffffff", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.6, "color": "ffffff00" }
 				]
 			}
 		},

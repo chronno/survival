@@ -1,6 +1,8 @@
 package com.chronno.survival.game.components;
 
-import com.badlogic.ashley.core.Component;
+public class VisualComponent extends BaseComponent {
+    @Override
+    public void reset() {
 
-public class VisualComponent implements Component {
+    }
 }
