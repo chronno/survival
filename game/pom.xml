@@ -41,16 +41,6 @@
 			<version>${gdx.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.badlogicgames.gdx</groupId>
-			<artifactId>gdx-openal</artifactId>
-			<version>0.9.9</version>
-		</dependency>
-		<dependency>
-			<groupId>com.badlogicgames.box2dlights</groupId>
-			<artifactId>box2dlights</artifactId>
-			<version>1.5</version>
-		</dependency>
-		<dependency>
 			<groupId>com.badlogicgames.ashley</groupId>
 			<artifactId>ashley</artifactId>
 			<version>1.7.4</version>
@@ -59,16 +49,6 @@
 			<groupId>com.esotericsoftware.spine</groupId>
 			<artifactId>spine-libgdx</artifactId>
 			<version>3.8.55.1</version>
-		</dependency>
-		<dependency>
-			<groupId>games.rednblack.hyperlap2d</groupId>
-			<artifactId>runtime-libgdx</artifactId>
-			<version>0.0.6</version>
-		</dependency>
-		<dependency>
-			<groupId>games.rednblack.hyperlap2d</groupId>
-			<artifactId>libgdx-spine-extension</artifactId>
-			<version>0.0.6</version>
 		</dependency>
 		<dependency>
 			<groupId>com.chronno</groupId>
