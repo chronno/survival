@@ -1,0 +1,839 @@
+
+Male No Items.png
+size: 713,205
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body/Down/down_L_foot
+  rotate: false
+  xy: 498, 2
+  size: 30, 30
+  orig: 32, 32
+  offset: 1, 1
+  index: -1
+Body/Down/down_L_hand
+  rotate: false
+  xy: 432, 2
+  size: 31, 30
+  orig: 33, 32
+  offset: 1, 1
+  index: -1
+Body/Down/down_L_lower_arm
+  rotate: true
+  xy: 641, 31
+  size: 18, 26
+  orig: 23, 28
+  offset: 4, 1
+  index: -1
+Body/Down/down_L_lower_leg
+  rotate: true
+  xy: 298, 31
+  size: 16, 17
+  orig: 18, 19
+  offset: 1, 1
+  index: -1
+Body/Down/down_L_upper_arm
+  rotate: false
+  xy: 580, 29
+  size: 18, 34
+  orig: 20, 36
+  offset: 1, 1
+  index: -1
+Body/Down/down_L_upper_leg
+  rotate: true
+  xy: 432, 34
+  size: 23, 36
+  orig: 25, 38
+  offset: 1, 1
+  index: -1
+Body/Down/down_R_foot
+  rotate: false
+  xy: 515, 34
+  size: 30, 30
+  orig: 32, 32
+  offset: 1, 1
+  index: -1
+Body/Down/down_R_hand
+  rotate: false
+  xy: 465, 2
+  size: 31, 30
+  orig: 33, 32
+  offset: 1, 1
+  index: -1
+Body/Down/down_R_lower_arm
+  rotate: true
+  xy: 566, 9
+  size: 18, 26
+  orig: 23, 28
+  offset: 1, 1
+  index: -1
+Body/Down/down_R_lower_leg
+  rotate: true
+  xy: 317, 31
+  size: 16, 17
+  orig: 18, 19
+  offset: 1, 1
+  index: -1
+Body/Down/down_R_upper_arm
+  rotate: true
+  xy: 600, 25
+  size: 18, 34
+  orig: 20, 36
+  offset: 1, 1
+  index: -1
+Body/Down/down_R_upper_leg
+  rotate: true
+  xy: 470, 34
+  size: 23, 36
+  orig: 25, 38
+  offset: 1, 1
+  index: -1
+Body/Down/down_body
+  rotate: false
+  xy: 121, 4
+  size: 52, 41
+  orig: 54, 43
+  offset: 1, 1
+  index: -1
+Body/Down/down_chest
+  rotate: false
+  xy: 641, 165
+  size: 70, 38
+  orig: 72, 40
+  offset: 1, 1
+  index: -1
+Body/Down/down_eyebrows
+  rotate: false
+  xy: 298, 49
+  size: 54, 8
+  orig: 56, 10
+  offset: 1, 1
+  index: -1
+Body/Down/down_eyes
+  rotate: false
+  xy: 641, 77
+  size: 49, 19
+  orig: 53, 22
+  offset: 2, 2
+  index: -1
+Body/Down/down_eyes_closed
+  rotate: false
+  xy: 215, 25
+  size: 51, 20
+  orig: 53, 23
+  offset: 1, 2
+  index: -1
+Body/Down/down_head
+  rotate: false
+  xy: 363, 110
+  size: 89, 93
+  orig: 95, 95
+  offset: 3, 1
+  index: -1
+Body/Side/side_L_foot
+  rotate: false
+  xy: 215, 2
+  size: 36, 21
+  orig: 40, 23
+  offset: 2, 1
+  index: -1
+Body/Side/side_L_hand
+  rotate: true
+  xy: 547, 34
+  size: 29, 31
+  orig: 31, 32
+  offset: 1, 0
+  index: -1
+Body/Side/side_L_lower_arm
+  rotate: true
+  xy: 253, 2
+  size: 21, 29
+  orig: 23, 33
+  offset: 1, 2
+  index: -1
+Body/Side/side_R_lower_arm
+  rotate: true
+  xy: 253, 2
+  size: 21, 29
+  orig: 23, 33
+  offset: 1, 2
+  index: -1
+Body/Side/side_L_lower_leg
+  rotate: false
+  xy: 622, 4
+  size: 18, 19
+  orig: 20, 22
+  offset: 1, 2
+  index: -1
+Body/Side/side_L_upper_arm
+  rotate: true
+  xy: 604, 66
+  size: 26, 35
+  orig: 29, 38
+  offset: 1, 2
+  index: -1
+Body/Side/side_L_upper_leg
+  rotate: true
+  xy: 394, 32
+  size: 25, 36
+  orig: 27, 39
+  offset: 1, 2
+  index: -1
+Body/Side/side_R_foot
+  rotate: false
+  xy: 175, 8
+  size: 38, 37
+  orig: 40, 39
+  offset: 1, 1
+  index: -1
+Body/Side/side_R_hand
+  rotate: false
+  xy: 394, 2
+  size: 31, 28
+  orig: 34, 32
+  offset: 2, 2
+  index: -1
+Body/Side/side_R_lower_leg
+  rotate: true
+  xy: 268, 25
+  size: 20, 22
+  orig: 22, 24
+  offset: 1, 1
+  index: -1
+Body/Side/side_R_upper_arm
+  rotate: true
+  xy: 602, 94
+  size: 26, 36
+  orig: 29, 40
+  offset: 1, 2
+  index: -1
+Body/Side/side_R_upper_leg
+  rotate: true
+  xy: 354, 31
+  size: 26, 38
+  orig: 30, 40
+  offset: 2, 1
+  index: -1
+Body/Side/side_body
+  rotate: false
+  xy: 641, 98
+  size: 68, 65
+  orig: 91, 67
+  offset: 2, 1
+  index: -1
+Body/Side/side_chest
+  rotate: false
+  xy: 454, 59
+  size: 59, 59
+  orig: 65, 63
+  offset: 2, 2
+  index: -1
+Body/Side/side_eyebrow
+  rotate: false
+  xy: 561, 91
+  size: 39, 29
+  orig: 41, 32
+  offset: 1, 2
+  index: -1
+Body/Side/side_eyes
+  rotate: false
+  xy: 437, 90
+  size: 15, 18
+  orig: 17, 18
+  offset: 1, 0
+  index: -1
+Body/Side/side_eyes_closed
+  rotate: false
+  xy: 437, 71
+  size: 15, 17
+  orig: 19, 20
+  offset: 2, 2
+  index: -1
+Body/Side/side_head
+  rotate: true
+  xy: 547, 122
+  size: 81, 92
+  orig: 98, 95
+  offset: 1, 2
+  index: -1
+Body/Up/up_L_foot
+  rotate: true
+  xy: 530, 6
+  size: 26, 34
+  orig: 28, 37
+  offset: 1, 1
+  index: -1
+Body/Up/up_L_hand
+  rotate: false
+  xy: 684, 29
+  size: 27, 30
+  orig: 30, 34
+  offset: 2, 2
+  index: -1
+Body/Up/up_L_lower_arm
+  rotate: true
+  xy: 594, 5
+  size: 18, 26
+  orig: 23, 28
+  offset: 1, 1
+  index: -1
+Body/Up/up_L_lower_leg
+  rotate: false
+  xy: 284, 2
+  size: 17, 21
+  orig: 20, 23
+  offset: 2, 1
+  index: -1
+Body/Up/up_L_upper_arm
+  rotate: false
+  xy: 692, 61
+  size: 19, 35
+  orig: 23, 38
+  offset: 1, 2
+  index: -1
+Body/Up/up_L_upper_leg
+  rotate: true
+  xy: 561, 65
+  size: 24, 41
+  orig: 27, 43
+  offset: 1, 1
+  index: -1
+Body/Up/up_R_foot
+  rotate: true
+  xy: 335, 3
+  size: 26, 34
+  orig: 28, 37
+  offset: 1, 1
+  index: -1
+Body/Up/up_R_hand
+  rotate: true
+  xy: 303, 2
+  size: 27, 30
+  orig: 30, 34
+  offset: 1, 2
+  index: -1
+Body/Up/up_R_lower_arm
+  rotate: false
+  xy: 642, 3
+  size: 18, 26
+  orig: 23, 28
+  offset: 4, 1
+  index: -1
+Body/Up/up_R_lower_leg
+  rotate: true
+  xy: 371, 12
+  size: 17, 21
+  orig: 20, 23
+  offset: 1, 1
+  index: -1
+Body/Up/up_R_upper_arm
+  rotate: true
+  xy: 604, 45
+  size: 19, 35
+  orig: 23, 38
+  offset: 3, 2
+  index: -1
+Body/Up/up_R_upper_leg
+  rotate: true
+  xy: 641, 51
+  size: 24, 41
+  orig: 27, 43
+  offset: 2, 1
+  index: -1
+Body/Up/up_body
+  rotate: true
+  xy: 515, 66
+  size: 52, 44
+  orig: 54, 48
+  offset: 1, 2
+  index: -1
+Body/Up/up_chest
+  rotate: false
+  xy: 363, 59
+  size: 72, 49
+  orig: 74, 51
+  offset: 1, 1
+  index: -1
+Body/Up/up_head
+  rotate: false
+  xy: 454, 120
+  size: 91, 83
+  orig: 95, 85
+  offset: 2, 1
+  index: -1
+Head Objects/Facial Hair/sprite_side
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Armours/sprite_down_body
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Armours/sprite_down_chest
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Belts/sprite_down
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Gloves/sprite_down_L_hand
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Gloves/sprite_down_R_hand
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Pants/sprite_down_L_upper_leg
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Pants/sprite_down_R_upper_leg
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Pants/sprite_down_hip
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Shirts/sprite_down_L_lower_arm
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Shirts/sprite_down_L_upper_arm
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Shirts/sprite_down_R_lower_arm
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Shirts/sprite_down_R_upper_arm
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Shoes/sprite_down_L_foot
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Shoes/sprite_down_L_lower_leg
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Shoes/sprite_down_R_foot
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Shoes/sprite_down_R_lower_leg
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Shoulder Pads/sprite_down_L
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Down/Shoulder Pads/sprite_down_R
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Armours/sprite_side_body
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Armours/sprite_side_chest
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Belts/sprite_side
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Gloves/sprite_side_L_hand
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Gloves/sprite_side_R_hand
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Pants/sprite_side_L_upper_leg
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Pants/sprite_side_R_upper_leg
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Pants/sprite_side_hip
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Shirts/sprite_side_L_lower_arm
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Shirts/sprite_side_L_upper_arm
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Shirts/sprite_side_R_lower_arm
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Shirts/sprite_side_R_upper_arm
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Shoes/sprite_side_L_foot
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Shoes/sprite_side_L_lower_leg
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Shoes/sprite_side_R_foot
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Shoes/sprite_side_R_lower_leg
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Shoulder Pads/sprite_side_L
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Side/Shoulder Pads/sprite_side_R
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Armours/sprite_up_body
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Armours/sprite_up_chest
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Belts/sprite_down
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Gloves/sprite_up_L_hand
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Gloves/sprite_up_R_hand
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Pants/sprite_up_L_upper_leg
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Pants/sprite_up_R_upper_leg
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Pants/sprite_up_hip
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Shirts/sprite_up_L_lower_arm
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Shirts/sprite_up_L_upper_arm
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Shirts/sprite_up_R_lower_arm
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Shirts/sprite_up_R_upper_arm
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Shoes/sprite_up_L_foot
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Shoes/sprite_up_L_lower_leg
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Shoes/sprite_up_R_foot
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Shoes/sprite_up_R_lower_leg
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Shoulder Pads/sprite_up_L
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Equipment Up/Shoulder Pads/sprite_up_R
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Head Objects/Facial Hair/sprite_down
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Head Objects/Hair/sprite_down
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Head Objects/Hair/sprite_side
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Head Objects/Hair/sprite_up
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Head Objects/Headwear/sprite_down
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Head Objects/Headwear/sprite_side
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Head Objects/Headwear/sprite_up
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Weapon Objects/bow_sprite
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Weapon Objects/swing_sprite
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Weapon Objects/thrust_sprite
+  rotate: false
+  xy: 2, 5
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Weapon Objects/bow_effect
+  rotate: true
+  xy: 2, 8
+  size: 37, 117
+  orig: 59, 117
+  offset: 22, 0
+  index: -1
+Weapon Objects/swing_effect
+  rotate: true
+  xy: 2, 47
+  size: 156, 294
+  orig: 168, 299
+  offset: 12, 5
+  index: -1
+Weapon Objects/thrust_effect
+  rotate: false
+  xy: 298, 59
+  size: 63, 144
+  orig: 69, 156
+  offset: 1, 12
+  index: -1
