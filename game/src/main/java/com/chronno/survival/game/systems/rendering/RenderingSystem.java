@@ -23,7 +23,6 @@ public class RenderingSystem extends EntitySystem {
     private static final ComponentMapper<AnimationComponent> AnimationMapper = ComponentMapper.getFor(AnimationComponent.class);
     private static final ComponentMapper<SkeletonComponent> SkeletonMapper = ComponentMapper.getFor(SkeletonComponent.class);
 
-
     private final OrthographicCamera camera;
     private final SpriteBatch spriteBatch;
     private final SkeletonRenderer skeletonRenderer;

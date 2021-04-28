@@ -27,8 +27,6 @@ buildNumber.properties
 ##############################
 ## Gradle
 ##############################
-bin/
-build/
 .gradle
 .gradletasknamecache
 gradle-app.setting
@@ -82,3 +80,8 @@ nb-configuration.xml
 ## OS X
 ##############################
 .DS_Store
+
+##############################
+## Assets
+##############################
+/game/src/main/resources/

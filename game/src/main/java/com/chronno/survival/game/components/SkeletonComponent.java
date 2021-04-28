@@ -7,6 +7,9 @@ import com.esotericsoftware.spine.SkeletonData;
 import com.esotericsoftware.spine.SkeletonJson;
 import com.esotericsoftware.spine.Skin;
 
+import static com.chronno.survival.game.components.DirectionComponent.Direction.Left;
+import static com.chronno.survival.game.components.DirectionComponent.Direction.Right;
+
 public final class SkeletonComponent extends BaseComponent {
 
     private static final String JsonNameStructure = "%s Character %s.json";
@@ -14,7 +17,6 @@ public final class SkeletonComponent extends BaseComponent {
     private static String AnimationsPath = "animations/";
     private String atlasPath;
     private String jsonPath;
-    private SkeletonData skeletonData;
     private Skeleton skeleton;
 
     public void set(String atlasPath, String jsonPath) {
@@ -23,7 +25,7 @@ public final class SkeletonComponent extends BaseComponent {
         final TextureAtlas atlas = new TextureAtlas(Gdx.files.internal(AnimationsPath.concat(atlasPath)));
         final SkeletonJson skeletonJson = new SkeletonJson(atlas);
         skeletonJson.setScale(0.5f);
-        skeletonData = skeletonJson.readSkeletonData(Gdx.files.internal(AnimationsPath.concat(jsonPath)));
+        final SkeletonData skeletonData = skeletonJson.readSkeletonData(Gdx.files.internal(AnimationsPath.concat(jsonPath)));
         Skin headSkin = skeletonData.findSkin("Head");
         Skin swordSkin = skeletonData.findSkin("Swing");
         Skin helmSkin = skeletonData.findSkin("Headwear");
@@ -48,6 +50,7 @@ public final class SkeletonComponent extends BaseComponent {
         if (shouldChangeSkeleton(currentDirection)) {
             set(atlasPath, getUpdatedJsonPath(currentDirection));
         }
+        skeleton.setScaleX(Left.equals(currentDirection) ? - 1 : 1);
     }
 
     private Boolean shouldChangeSkeleton(DirectionComponent.Direction requestedDirection) {
@@ -56,7 +59,7 @@ public final class SkeletonComponent extends BaseComponent {
     }
 
     private String getUpdatedJsonPath(DirectionComponent.Direction currentDirection) {
-        if (currentDirection.equals(DirectionComponent.Direction.Left) || currentDirection.equals(DirectionComponent.Direction.Right)) {
+        if (currentDirection.equals(Left) || currentDirection.equals(Right)) {
             return String.format(JsonNameStructure, "Male", "Side");
         } else {
             return String.format(JsonNameStructure, "Male", currentDirection.name());

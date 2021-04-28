@@ -52,8 +52,7 @@ public class PlayerInputSystem extends EntitySystem {
     public void update(float deltaTime) {
         if (Gdx.input.isKeyJustPressed(Input.Keys.A)) {
             entities.forEach(entity -> startAction(entity, Swing, Empty));
-        }
-        if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
+        } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
             entities.forEach(entity -> startAction(entity, Walk, Down));
         } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
             entities.forEach(entity -> startAction(entity, Walk, Up));
