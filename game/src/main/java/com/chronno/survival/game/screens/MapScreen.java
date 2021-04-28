@@ -9,10 +9,13 @@ import com.chronno.survival.game.components.AnimationComponent;
 import com.chronno.survival.game.components.DirectionComponent;
 import com.chronno.survival.game.components.PositionComponent;
 import com.chronno.survival.game.components.SkeletonComponent;
+import com.chronno.survival.game.components.TilemapComponent;
+import com.chronno.survival.game.components.rendering.RendererComponent;
+import com.chronno.survival.game.components.rendering.SpineAnimationRenderer;
+import com.chronno.survival.game.components.rendering.TileMapRenderer;
 import com.chronno.survival.game.systems.CharacterActionSystem;
 import com.chronno.survival.game.systems.player.PlayerInputSystem;
 import com.chronno.survival.game.systems.rendering.RenderingSystem;
-import com.esotericsoftware.minlog.Log;
 
 public class MapScreen implements Screen {
 
@@ -28,9 +31,21 @@ public class MapScreen implements Screen {
         engine.addSystem(new CharacterActionSystem(4));
         engine.addSystem(new PlayerInputSystem(5));
 
-        Entity characterEntity = engine.createEntity();
-        Log.info("a new entity has been added to the engine");
+        Entity mapEntity = engine.createEntity();
+        TilemapComponent tilemapComponent = engine.createComponent(TilemapComponent.class);
+        tilemapComponent.set("testmap.tmx");
+        mapEntity.add(tilemapComponent);
+        RendererComponent rendererComponent = engine.createComponent(RendererComponent.class);
+        rendererComponent.set(new TileMapRenderer());
+        mapEntity.add(rendererComponent);
+        engine.addEntity(mapEntity);
 
+        createPlayerEntity();
+
+    }
+
+    private void createPlayerEntity() {
+        Entity characterEntity = engine.createEntity();
         SkeletonComponent skeletonComponent = engine.createComponent(SkeletonComponent.class);
         skeletonComponent.set("Male.atlas", "Male Character Down.json");
         AnimationComponent animationComponent = engine.createComponent(AnimationComponent.class);
@@ -40,9 +55,10 @@ public class MapScreen implements Screen {
         characterEntity.add(engine.createComponent(PositionComponent.class));
         characterEntity.add(engine.createComponent(ActionComponent.class));
         characterEntity.add(engine.createComponent(DirectionComponent.class));
-
+        RendererComponent rendererComponent = engine.createComponent(RendererComponent.class);
+        rendererComponent.set(new SpineAnimationRenderer());
+        characterEntity.add(rendererComponent);
         engine.addEntity(characterEntity);
-
     }
 
     @Override

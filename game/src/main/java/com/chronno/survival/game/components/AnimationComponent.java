@@ -4,7 +4,7 @@ import com.esotericsoftware.spine.AnimationState;
 import com.esotericsoftware.spine.AnimationStateData;
 import com.esotericsoftware.spine.Skeleton;
 
-public class AnimationComponent extends BaseComponent {
+public final class AnimationComponent extends BaseComponent {
 
     private AnimationState animationState;
     private AnimationStateData animationStateData;
@@ -26,7 +26,6 @@ public class AnimationComponent extends BaseComponent {
                 animationStateData = new AnimationStateData(skeleton.getData());
                 animationState = new AnimationState(animationStateData);
             }
-
             animationState.setAnimation(0, animation, loop);
         }
     }

@@ -1,13 +1,12 @@
 package com.chronno.survival.game.components;
 
 import com.badlogic.gdx.maps.tiled.TiledMap;
-import com.badlogic.gdx.maps.tiled.TiledMapRenderer;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
-import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 
-public class TilemapComponent extends BaseComponent {
+public final class TilemapComponent extends BaseComponent {
 
-    private TiledMapRenderer tiledMapRenderer;
+    private static final String MapsPath = "maps/";
+
     private TiledMap tiledMap;
 
     @Override
@@ -16,8 +15,11 @@ public class TilemapComponent extends BaseComponent {
     }
 
     public void set(String mapPath) {
-        tiledMap = new TmxMapLoader().load(mapPath);
-        tiledMapRenderer = new OrthogonalTiledMapRenderer(tiledMap);
 
+        tiledMap = new TmxMapLoader().load(MapsPath.concat(mapPath));
+    }
+
+    public TiledMap getMap() {
+        return tiledMap;
     }
 }

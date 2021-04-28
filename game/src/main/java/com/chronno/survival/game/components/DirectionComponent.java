@@ -1,6 +1,6 @@
 package com.chronno.survival.game.components;
 
-public class DirectionComponent extends BaseComponent {
+public final class DirectionComponent extends BaseComponent {
 
     private Direction direction = Direction.Down;
 

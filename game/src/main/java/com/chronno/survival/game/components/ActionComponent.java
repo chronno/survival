@@ -1,6 +1,6 @@
 package com.chronno.survival.game.components;
 
-public class ActionComponent extends BaseComponent {
+public final class ActionComponent extends BaseComponent {
 
     private Action currentAction = Action.Idle;
 

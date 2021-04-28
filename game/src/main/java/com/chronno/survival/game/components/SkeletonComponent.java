@@ -13,8 +13,8 @@ import static com.chronno.survival.game.components.DirectionComponent.Direction.
 public final class SkeletonComponent extends BaseComponent {
 
     private static final String JsonNameStructure = "%s Character %s.json";
+    private static final String AnimationsPath = "animations/";
 
-    private static String AnimationsPath = "animations/";
     private String atlasPath;
     private String jsonPath;
     private Skeleton skeleton;
@@ -24,8 +24,16 @@ public final class SkeletonComponent extends BaseComponent {
         this.jsonPath = jsonPath;
         final TextureAtlas atlas = new TextureAtlas(Gdx.files.internal(AnimationsPath.concat(atlasPath)));
         final SkeletonJson skeletonJson = new SkeletonJson(atlas);
-        skeletonJson.setScale(0.5f);
+        //skeletonJson.setScale(0.5f);
         final SkeletonData skeletonData = skeletonJson.readSkeletonData(Gdx.files.internal(AnimationsPath.concat(jsonPath)));
+        setBasicSkin(skeletonData);
+        skeleton = new Skeleton(skeletonData);
+        skeleton.setX(1080);
+        skeleton.setY(1080);
+    }
+
+    //TODO remove this this should be handled by some kind of clothing/equipment system and probably this should apply that
+    private void setBasicSkin(SkeletonData skeletonData) {
         Skin headSkin = skeletonData.findSkin("Head");
         Skin swordSkin = skeletonData.findSkin("Swing");
         Skin helmSkin = skeletonData.findSkin("Headwear");
@@ -34,7 +42,6 @@ public final class SkeletonComponent extends BaseComponent {
         skin.addSkin(swordSkin);
         skin.addSkin(helmSkin);
         skeletonData.setDefaultSkin(skin);
-        skeleton = new Skeleton(skeletonData);
     }
 
     public Skeleton getSkeleton() {
@@ -50,7 +57,7 @@ public final class SkeletonComponent extends BaseComponent {
         if (shouldChangeSkeleton(currentDirection)) {
             set(atlasPath, getUpdatedJsonPath(currentDirection));
         }
-        skeleton.setScaleX(Left.equals(currentDirection) ? - 1 : 1);
+        skeleton.setScaleX(Left.equals(currentDirection) ? -1 : 1);
     }
 
     private Boolean shouldChangeSkeleton(DirectionComponent.Direction requestedDirection) {

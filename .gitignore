@@ -84,4 +84,6 @@ nb-configuration.xml
 ##############################
 ## Assets
 ##############################
-/game/src/main/resources/
+*.png
+*.json
+*.atlas
