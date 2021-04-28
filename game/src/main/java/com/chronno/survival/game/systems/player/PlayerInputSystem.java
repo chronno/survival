@@ -1,7 +1,11 @@
 package com.chronno.survival.game.systems.player;
 
 
-import com.badlogic.ashley.core.*;
+import com.badlogic.ashley.core.ComponentMapper;
+import com.badlogic.ashley.core.Engine;
+import com.badlogic.ashley.core.Entity;
+import com.badlogic.ashley.core.EntitySystem;
+import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.utils.ImmutableArray;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -12,8 +16,14 @@ import com.chronno.survival.game.components.DirectionComponent.Direction;
 import com.chronno.survival.game.components.PositionComponent;
 import com.esotericsoftware.minlog.Log;
 
-import static com.chronno.survival.game.components.ActionComponent.Action.*;
-import static com.chronno.survival.game.components.DirectionComponent.Direction.*;
+import static com.chronno.survival.game.components.ActionComponent.Action.Idle;
+import static com.chronno.survival.game.components.ActionComponent.Action.Swing;
+import static com.chronno.survival.game.components.ActionComponent.Action.Walk;
+import static com.chronno.survival.game.components.DirectionComponent.Direction.Down;
+import static com.chronno.survival.game.components.DirectionComponent.Direction.Empty;
+import static com.chronno.survival.game.components.DirectionComponent.Direction.Left;
+import static com.chronno.survival.game.components.DirectionComponent.Direction.Right;
+import static com.chronno.survival.game.components.DirectionComponent.Direction.Up;
 
 
 public class PlayerInputSystem extends EntitySystem {

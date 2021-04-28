@@ -1,10 +1,18 @@
 package com.chronno.survival.game.systems;
 
-import com.badlogic.ashley.core.*;
+import com.badlogic.ashley.core.ComponentMapper;
+import com.badlogic.ashley.core.Engine;
+import com.badlogic.ashley.core.Entity;
+import com.badlogic.ashley.core.EntitySystem;
+import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.utils.ImmutableArray;
-import com.chronno.survival.game.components.*;
+import com.chronno.survival.game.components.ActionComponent;
 import com.chronno.survival.game.components.ActionComponent.Action;
+import com.chronno.survival.game.components.AnimationComponent;
+import com.chronno.survival.game.components.DirectionComponent;
 import com.chronno.survival.game.components.DirectionComponent.Direction;
+import com.chronno.survival.game.components.PositionComponent;
+import com.chronno.survival.game.components.SkeletonComponent;
 import com.esotericsoftware.minlog.Log;
 
 public class CharacterActionSystem extends EntitySystem {

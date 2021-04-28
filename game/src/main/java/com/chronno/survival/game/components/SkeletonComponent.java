@@ -32,7 +32,7 @@ public final class SkeletonComponent extends BaseComponent {
         Skin skin = skeletonData.findSkin("Leather Equipment");
         skin.addSkin(headSkin);
         skin.addSkin(swordSkin);
-        //skin.addSkin(helmSkin);
+        skin.addSkin(helmSkin);
         skeletonData.setDefaultSkin(skin);
         skeleton = new Skeleton(skeletonData);
     }
