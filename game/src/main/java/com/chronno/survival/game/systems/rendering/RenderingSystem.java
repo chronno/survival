@@ -7,16 +7,18 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.chronno.survival.game.components.AnimationComponent;
-import com.chronno.survival.game.components.CharacterAnimationComponent;
 import com.chronno.survival.game.components.PositionComponent;
+import com.chronno.survival.game.components.SkeletonComponent;
 import com.esotericsoftware.minlog.Log;
 import com.esotericsoftware.spine.SkeletonRenderer;
 
 public class RenderingSystem extends EntitySystem {
 
 
-    private ComponentMapper<PositionComponent> pm = ComponentMapper.getFor(PositionComponent.class);
-    private ComponentMapper<CharacterAnimationComponent> am = ComponentMapper.getFor(CharacterAnimationComponent.class);
+    private static final ComponentMapper<PositionComponent> PositionMapper = ComponentMapper.getFor(PositionComponent.class);
+    private static final ComponentMapper<AnimationComponent> AnimationMapper = ComponentMapper.getFor(AnimationComponent.class);
+    private static final ComponentMapper<SkeletonComponent> SkeletonMapper = ComponentMapper.getFor(SkeletonComponent.class);
+
 
     private final OrthographicCamera camera;
     private final SpriteBatch spriteBatch;
@@ -34,7 +36,8 @@ public class RenderingSystem extends EntitySystem {
     @Override
     public void addedToEngine(Engine engine) {
         Log.info("Rendering System was added");
-        entities = engine.getEntitiesFor(Family.all(PositionComponent.class, CharacterAnimationComponent.class).get());
+        Family family = Family.all(PositionComponent.class, AnimationComponent.class, SkeletonComponent.class).get();
+        entities = engine.getEntitiesFor(family);
 
     }
 
@@ -53,11 +56,12 @@ public class RenderingSystem extends EntitySystem {
     }
 
     private void draw(Entity entity, float deltaTime) {
-        PositionComponent position = pm.get(entity);
-        AnimationComponent animation = am.get(entity);
-        animation.getAnimationState().update(deltaTime);
-        animation.getAnimationState().apply(animation.getSkeleton());
-        animation.getSkeleton().updateWorldTransform();
-        skeletonRenderer.draw(spriteBatch, animation.getSkeleton());
+        PositionComponent positionComponent = PositionMapper.get(entity);
+        SkeletonComponent skeletonComponent = SkeletonMapper.get(entity);
+        AnimationComponent animationComponent = AnimationMapper.get(entity);
+        animationComponent.getAnimationState().update(deltaTime);
+        animationComponent.getAnimationState().apply(skeletonComponent.getSkeleton());
+        skeletonComponent.getSkeleton().updateWorldTransform();
+        skeletonRenderer.draw(spriteBatch, skeletonComponent.getSkeleton());
     }
 }

@@ -14,7 +14,9 @@ public class SurvivalGame extends Game {
 
 
     @Override
-    public void create() { setScreen(new MapScreen(engine)); }
+    public void create() {
+        setScreen(new MapScreen(engine));
+    }
 
     @Override
     public void render() {

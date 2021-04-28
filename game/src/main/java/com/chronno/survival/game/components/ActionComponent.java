@@ -1,16 +1,19 @@
 package com.chronno.survival.game.components;
 
-public class PlayerComponent extends BaseComponent {
+public class ActionComponent extends BaseComponent {
+
     private Action currentAction = Action.Idle;
 
     public void set(Action nextAction) {
         this.currentAction = nextAction;
     }
 
+    public Action getCurrentAction() {
+        return currentAction;
+    }
 
     @Override
     public void reset() {
-
     }
 
     public enum Action {

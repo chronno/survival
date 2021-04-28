@@ -5,22 +5,21 @@ import com.badlogic.ashley.core.*;
 import com.badlogic.ashley.utils.ImmutableArray;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-import com.chronno.survival.game.components.CharacterAnimationComponent;
+import com.chronno.survival.game.components.ActionComponent;
+import com.chronno.survival.game.components.ActionComponent.Action;
 import com.chronno.survival.game.components.DirectionComponent;
-import com.chronno.survival.game.components.DirectionComponent.*;
-import com.chronno.survival.game.components.PlayerComponent;
+import com.chronno.survival.game.components.DirectionComponent.Direction;
 import com.chronno.survival.game.components.PositionComponent;
 import com.esotericsoftware.minlog.Log;
 
+import static com.chronno.survival.game.components.ActionComponent.Action.*;
 import static com.chronno.survival.game.components.DirectionComponent.Direction.*;
-import static com.chronno.survival.game.components.PlayerComponent.Action.*;
 
 
 public class PlayerInputSystem extends EntitySystem {
 
     private static final ComponentMapper<DirectionComponent> DirectionMapper = ComponentMapper.getFor(DirectionComponent.class);
-    private static final ComponentMapper<CharacterAnimationComponent> CharacterAnimationMapper = ComponentMapper.getFor(CharacterAnimationComponent.class);
-    private static final ComponentMapper<PlayerComponent> PlayerMapper = ComponentMapper.getFor(PlayerComponent.class);
+    private static final ComponentMapper<ActionComponent> ActionMapper = ComponentMapper.getFor(ActionComponent.class);
     private ImmutableArray<Entity> entities;
 
     public PlayerInputSystem(int priority) {
@@ -30,7 +29,7 @@ public class PlayerInputSystem extends EntitySystem {
     @Override
     public void addedToEngine(Engine engine) {
         Log.info("Player Input System was added");
-        Family family = Family.all(PositionComponent.class, DirectionComponent.class, PlayerComponent.class, CharacterAnimationComponent.class).get();
+        Family family = Family.all(PositionComponent.class, DirectionComponent.class, ActionComponent.class).get();
         entities = engine.getEntitiesFor(family);
     }
 
@@ -41,7 +40,7 @@ public class PlayerInputSystem extends EntitySystem {
 
     @Override
     public void update(float deltaTime) {
-        if(Gdx.input.isKeyJustPressed(Input.Keys.A)) {
+        if (Gdx.input.isKeyJustPressed(Input.Keys.A)) {
             entities.forEach(entity -> startAction(entity, Swing, Empty));
         }
         if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
@@ -57,11 +56,13 @@ public class PlayerInputSystem extends EntitySystem {
         }
     }
 
-    private void startAction(Entity entity, PlayerComponent.Action action, Direction direction) {
+    private void startAction(Entity entity, Action action, Direction direction) {
         DirectionComponent directionComponent = DirectionMapper.get(entity);
-        PlayerComponent playerComponent = PlayerMapper.get(entity);
-        CharacterAnimationComponent animationComponent = CharacterAnimationMapper.get(entity);
-        if (!Empty.equals(direction)) { directionComponent.set(direction); }
-        animationComponent.setAnimation(action.name(), action.isLoopable());
+        ActionComponent actionComponent = ActionMapper.get(entity);
+        if (!Empty.equals(direction)) {
+            directionComponent.set(direction);
+        }
+        actionComponent.set(action);
+
     }
 }
