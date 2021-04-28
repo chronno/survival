@@ -14,16 +14,14 @@ public final class SkeletonComponent extends BaseComponent {
     private static String AnimationsPath = "animations/";
     private String atlasPath;
     private String jsonPath;
-    private TextureAtlas atlas;
-    private SkeletonJson skeletonJson;
     private SkeletonData skeletonData;
     private Skeleton skeleton;
 
     public void set(String atlasPath, String jsonPath) {
         this.atlasPath = atlasPath;
         this.jsonPath = jsonPath;
-        atlas = new TextureAtlas(Gdx.files.internal(AnimationsPath.concat(atlasPath)));
-        skeletonJson = new SkeletonJson(atlas);
+        final TextureAtlas atlas = new TextureAtlas(Gdx.files.internal(AnimationsPath.concat(atlasPath)));
+        final SkeletonJson skeletonJson = new SkeletonJson(atlas);
         skeletonJson.setScale(0.5f);
         skeletonData = skeletonJson.readSkeletonData(Gdx.files.internal(AnimationsPath.concat(jsonPath)));
         Skin headSkin = skeletonData.findSkin("Head");
