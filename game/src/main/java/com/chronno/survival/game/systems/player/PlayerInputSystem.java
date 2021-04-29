@@ -30,6 +30,7 @@ public class PlayerInputSystem extends EntitySystem {
 
     private static final ComponentMapper<DirectionComponent> DirectionMapper = ComponentMapper.getFor(DirectionComponent.class);
     private static final ComponentMapper<ActionComponent> ActionMapper = ComponentMapper.getFor(ActionComponent.class);
+    private static final ComponentMapper<PositionComponent> PositionMapper = ComponentMapper.getFor(PositionComponent.class);
     private ImmutableArray<Entity> entities;
 
     public PlayerInputSystem(int priority) {
@@ -68,9 +69,11 @@ public class PlayerInputSystem extends EntitySystem {
     private void startAction(Entity entity, Action action, Direction direction) {
         DirectionComponent directionComponent = DirectionMapper.get(entity);
         ActionComponent actionComponent = ActionMapper.get(entity);
-        if (!Empty.equals(direction)) {
-            directionComponent.set(direction);
+        PositionComponent positionComponent = PositionMapper.get(entity);
+        if (Walk.equals(action)) {
+            positionComponent.move(direction, 1);
         }
+        if (!Empty.equals(direction)) { directionComponent.set(direction); }
         actionComponent.set(action);
 
     }

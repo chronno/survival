@@ -19,7 +19,6 @@ public class CharacterActionSystem extends EntitySystem {
 
     private static final String AnimNameStructure = "%s %s";
 
-    private static final ComponentMapper<PositionComponent> PositionMapper = ComponentMapper.getFor(PositionComponent.class);
     private static final ComponentMapper<DirectionComponent> DirectionMapper = ComponentMapper.getFor(DirectionComponent.class);
     private static final ComponentMapper<ActionComponent> ActionMapper = ComponentMapper.getFor(ActionComponent.class);
     private static final ComponentMapper<SkeletonComponent> SkeletonMapper = ComponentMapper.getFor(SkeletonComponent.class);
@@ -56,7 +55,6 @@ public class CharacterActionSystem extends EntitySystem {
     private void processEntity(Entity entity, float delta) {
         ActionComponent actionComponent = ActionMapper.get(entity);
         DirectionComponent directionComponent = DirectionMapper.get(entity);
-        PositionComponent PositionComponent = PositionMapper.get(entity);
         SkeletonComponent skeletonComponent = SkeletonMapper.get(entity);
         AnimationComponent animationComponent = AnimationMapper.get(entity);
 

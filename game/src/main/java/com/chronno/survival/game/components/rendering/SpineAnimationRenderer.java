@@ -23,11 +23,15 @@ public class SpineAnimationRenderer implements Renderer {
 
     @Override
     public void render(Entity entity, SpriteBatch spriteBatch, Camera camera, Float delta) {
+        PositionComponent positionComponent = PositionMapper.get(entity);
         SkeletonComponent skeletonComponent = SkeletonMapper.get(entity);
         AnimationComponent animationComponent = AnimationMapper.get(entity);
+
         animationComponent.getAnimationState().update(delta);
         animationComponent.getAnimationState().apply(skeletonComponent.getSkeleton());
         skeletonComponent.getSkeleton().updateWorldTransform();
+        skeletonComponent.getSkeleton().setX(positionComponent.getX());
+        skeletonComponent.getSkeleton().setY(positionComponent.getY());
         spriteBatch.begin();
         skeletonRenderer.draw(spriteBatch, skeletonComponent.getSkeleton());
         spriteBatch.end();

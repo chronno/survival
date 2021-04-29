@@ -31,6 +31,11 @@ public class MapScreen implements Screen {
         engine.addSystem(new CharacterActionSystem(4));
         engine.addSystem(new PlayerInputSystem(5));
 
+        createMapEntity();
+        createPlayerEntity();
+    }
+
+    private void createMapEntity() {
         Entity mapEntity = engine.createEntity();
         TilemapComponent tilemapComponent = engine.createComponent(TilemapComponent.class);
         tilemapComponent.set("example.tmx");
@@ -39,9 +44,6 @@ public class MapScreen implements Screen {
         rendererComponent.set(new TileMapRenderer());
         mapEntity.add(rendererComponent);
         engine.addEntity(mapEntity);
-
-        createPlayerEntity();
-
     }
 
     private void createPlayerEntity() {

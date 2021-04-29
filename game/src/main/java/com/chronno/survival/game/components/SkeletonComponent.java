@@ -24,12 +24,10 @@ public final class SkeletonComponent extends BaseComponent {
         this.jsonPath = jsonPath;
         final TextureAtlas atlas = new TextureAtlas(Gdx.files.internal(AnimationsPath.concat(atlasPath)));
         final SkeletonJson skeletonJson = new SkeletonJson(atlas);
-        //skeletonJson.setScale(0.5f);
         final SkeletonData skeletonData = skeletonJson.readSkeletonData(Gdx.files.internal(AnimationsPath.concat(jsonPath)));
         setBasicSkin(skeletonData);
         skeleton = new Skeleton(skeletonData);
-        skeleton.setX(1080);
-        skeleton.setY(1080);
+
     }
 
     //TODO remove this this should be handled by some kind of clothing/equipment system and probably this should apply that
