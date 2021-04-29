@@ -33,7 +33,7 @@ public class MapScreen implements Screen {
 
         Entity mapEntity = engine.createEntity();
         TilemapComponent tilemapComponent = engine.createComponent(TilemapComponent.class);
-        tilemapComponent.set("testmap.tmx");
+        tilemapComponent.set("example.tmx");
         mapEntity.add(tilemapComponent);
         RendererComponent rendererComponent = engine.createComponent(RendererComponent.class);
         rendererComponent.set(new TileMapRenderer());

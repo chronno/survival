@@ -14,7 +14,7 @@ public class TileMapRenderer implements Renderer {
     @Override
     public void render(Entity entity, SpriteBatch spriteBatch, Camera camera, Float delta) {
         TilemapComponent tilemapComponent = TilemapMapper.get(entity);
-        OrthogonalTiledMapRenderer renderer = new OrthogonalTiledMapRenderer(tilemapComponent.getMap(), spriteBatch);
+        OrthogonalTiledMapRenderer renderer = new OrthogonalTiledMapRenderer(tilemapComponent.getMap());
         renderer.setView((OrthographicCamera)camera);
         renderer.render();
     }
