@@ -11,7 +11,6 @@ import com.chronno.survival.game.components.ActionComponent.Action;
 import com.chronno.survival.game.components.AnimationComponent;
 import com.chronno.survival.game.components.DirectionComponent;
 import com.chronno.survival.game.components.DirectionComponent.Direction;
-import com.chronno.survival.game.components.PositionComponent;
 import com.chronno.survival.game.components.SkeletonComponent;
 import com.esotericsoftware.minlog.Log;
 
@@ -33,8 +32,7 @@ public class CharacterActionSystem extends EntitySystem {
     @Override
     public void addedToEngine(Engine engine) {
         Log.info("Movement System was added");
-        Family family = Family.all(PositionComponent.class,
-                DirectionComponent.class,
+        Family family = Family.all(DirectionComponent.class,
                 ActionComponent.class, SkeletonComponent.class,
                 AnimationComponent.class).get();
         entities = engine.getEntitiesFor(family);
@@ -48,11 +46,11 @@ public class CharacterActionSystem extends EntitySystem {
     @Override
     public void update(float deltaTime) {
         for (int i = 0; i < this.entities.size(); ++i) {
-            this.processEntity(this.entities.get(i), deltaTime);
+            this.processEntity(this.entities.get(i));
         }
     }
 
-    private void processEntity(Entity entity, float delta) {
+    private void processEntity(Entity entity) {
         ActionComponent actionComponent = ActionMapper.get(entity);
         DirectionComponent directionComponent = DirectionMapper.get(entity);
         SkeletonComponent skeletonComponent = SkeletonMapper.get(entity);

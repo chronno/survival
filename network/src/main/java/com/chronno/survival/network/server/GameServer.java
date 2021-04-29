@@ -1,14 +1,14 @@
 package com.chronno.survival.network.server;
 
-import java.io.IOException;
-import java.util.Optional;
-
 import com.chronno.survival.network.exception.ServerStartupException;
+import com.chronno.survival.network.messaging.Message;
 import com.chronno.survival.network.messaging.MessageInterpreter;
-import com.chronno.survival.network.messaging.MessageRegistry;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Server;
 import com.esotericsoftware.minlog.Log;
+
+import java.io.IOException;
+import java.util.Optional;
 
 public class GameServer {
 
@@ -23,7 +23,7 @@ public class GameServer {
 		this.server = new Server();
 		this.server.addListener(new ServerListener(this.server, interpreter));
 		this.kryo = server.getKryo();
-		MessageRegistry.register(this.kryo);
+		this.kryo.register(Message.class);
 	}
 
 	public void bindPorts(Integer tcpPort, Integer udpPort) {

@@ -1,14 +1,14 @@
 package com.chronno.survival.network.client;
 
-import java.io.IOException;
-import java.util.Optional;
-
 import com.chronno.survival.network.exception.ClientConnectionException;
-import com.chronno.survival.network.messaging.MessageRegistry;
+import com.chronno.survival.network.messaging.Message;
 import com.chronno.survival.network.messaging.MessageInterpreter;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Client;
 import com.esotericsoftware.minlog.Log;
+
+import java.io.IOException;
+import java.util.Optional;
 
 public class GameClient {
 	private static final Integer DEFAULT_TCP_PORT = 54555;
@@ -20,7 +20,7 @@ public class GameClient {
 		this.client = new Client();
 		this.client.addListener(new ClientListener(interpreter));
 		this.kryo = client.getKryo();
-		MessageRegistry.register(this.kryo);
+		this.kryo.register(Message.class);
 	}
 	
 	public void connect(String serverIp, Integer tcpPort,  Integer udpPort) {
