@@ -7,9 +7,6 @@
 		<artifactId>survival</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<properties>
-		<gdx.version>1.10.0</gdx.version>
-	</properties>
 	<artifactId>game</artifactId>
 	<dependencies>
 		<dependency>
@@ -56,6 +53,7 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+
 	<build>
         <finalName>Survival</finalName>
         <plugins>

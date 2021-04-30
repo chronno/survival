@@ -26,10 +26,17 @@ public class GameClient {
 	public void connect(String serverIp, Integer tcpPort,  Integer udpPort) {
 		try {
 			this.client.start();
-			this.client.connect(1000, serverIp, Optional.ofNullable(tcpPort).orElse(DEFAULT_TCP_PORT), Optional.of(udpPort).orElse(DEFAULT_UDP_PORT));
+			this.client.connect(10, serverIp, Optional.ofNullable(tcpPort).orElse(DEFAULT_TCP_PORT), Optional.of(udpPort).orElse(DEFAULT_UDP_PORT));
+
 		} catch (IOException e) {
 			Log.info(String.format("could not connect to: %s", serverIp));
 			throw new ClientConnectionException(String.format("failed to connect to: %s", serverIp), e);
+		}
+	}
+
+	public void sendMessage(Message message) {
+		if (client.isConnected()) {
+			this.client.sendTCP(message);
 		}
 	}
 

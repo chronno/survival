@@ -1,5 +1,7 @@
 package com.chronno.survival.game.components;
 
+import com.chronno.survival.game.model.Action;
+
 public final class ActionComponent extends BaseComponent {
 
     private Action currentAction = Action.Idle;
@@ -14,28 +16,5 @@ public final class ActionComponent extends BaseComponent {
 
     @Override
     public void reset() {
-    }
-
-    public enum Action {
-        Walk {
-            @Override
-            public Boolean isLoopable() {
-                return true;
-            }
-        },
-        Idle {
-            @Override
-            public Boolean isLoopable() {
-                return true;
-            }
-        },
-        Swing {
-            @Override
-            public Boolean isLoopable() {
-                return false;
-            }
-        };
-
-        public abstract Boolean isLoopable();
     }
 }

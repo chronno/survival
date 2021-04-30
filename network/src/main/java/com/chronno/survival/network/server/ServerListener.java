@@ -18,8 +18,7 @@ public class ServerListener extends Listener {
 
 	@Override
 	public void connected(Connection connection) {
-		Log.info(String.format("Connection from: %s, with id: %s", connection.getRemoteAddressTCP(), connection.getID()));
-
+		interpreter.onConnectionSuccess(connection);
 	}
 
 	@Override

@@ -30,8 +30,8 @@ public class SpineAnimationRenderer implements Renderer {
         animationComponent.getAnimationState().update(delta);
         animationComponent.getAnimationState().apply(skeletonComponent.getSkeleton());
         skeletonComponent.getSkeleton().updateWorldTransform();
-        skeletonComponent.getSkeleton().setX(positionComponent.getX());
-        skeletonComponent.getSkeleton().setY(positionComponent.getY());
+//        skeletonComponent.getSkeleton().setX(positionComponent.getX());
+//        skeletonComponent.getSkeleton().setY(positionComponent.getY());
         spriteBatch.begin();
         skeletonRenderer.draw(spriteBatch, skeletonComponent.getSkeleton());
         spriteBatch.end();

@@ -7,7 +7,7 @@ public class Message {
     private String type;
     private String token;
     private String payload;
-    private LocalDateTime dateTime;
+    private String dateTime;
 
     public String getType() {
         return type;
@@ -34,10 +34,20 @@ public class Message {
     }
 
     public LocalDateTime getDateTime() {
-        return dateTime;
+        return LocalDateTime.parse(this.dateTime);
+
     }
 
     public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "type='" + type + '\'' +
+                ", token='" + token + '\'' +
+                ", payload='" + payload + '\'' +
+                ", dateTime=" + dateTime +
+                '}';
     }
 }

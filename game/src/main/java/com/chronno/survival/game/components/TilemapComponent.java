@@ -15,7 +15,6 @@ public final class TilemapComponent extends BaseComponent {
     }
 
     public void set(String mapPath) {
-
         tiledMap = new TmxMapLoader().load(MapsPath.concat(mapPath));
     }
 

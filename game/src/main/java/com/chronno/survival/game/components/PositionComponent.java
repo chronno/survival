@@ -1,8 +1,8 @@
 package com.chronno.survival.game.components;
 
 public final class PositionComponent extends BaseComponent {
-    private Integer x = 512;
-    private Integer y = 512;
+    private Integer x;
+    private Integer y;
 
     public void set(Integer x, Integer y) {
         this.x = x;
@@ -27,26 +27,6 @@ public final class PositionComponent extends BaseComponent {
 
     @Override
     public void reset() {
-
-    }
-
-    public void move(DirectionComponent.Direction direction, int value) {
-        switch (direction) {
-            case Empty:
-                break;
-            case Down:
-                y -= value;
-                break;
-            case Up:
-                y += value;
-                break;
-            case Left:
-                x -= value;
-                break;
-            case Right:
-                x += value;
-                break;
-        }
 
     }
 }

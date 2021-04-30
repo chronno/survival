@@ -7,12 +7,9 @@ import com.esotericsoftware.spine.SkeletonData;
 import com.esotericsoftware.spine.SkeletonJson;
 import com.esotericsoftware.spine.Skin;
 
-import static com.chronno.survival.game.components.DirectionComponent.Direction.Left;
-import static com.chronno.survival.game.components.DirectionComponent.Direction.Right;
 
 public final class SkeletonComponent extends BaseComponent {
 
-    private static final String JsonNameStructure = "%s Character %s.json";
     private static final String AnimationsPath = "animations/";
 
     private String atlasPath;
@@ -27,7 +24,8 @@ public final class SkeletonComponent extends BaseComponent {
         final SkeletonData skeletonData = skeletonJson.readSkeletonData(Gdx.files.internal(AnimationsPath.concat(jsonPath)));
         setBasicSkin(skeletonData);
         skeleton = new Skeleton(skeletonData);
-
+        skeleton.setX(512);
+        skeleton.setY(512);
     }
 
     //TODO remove this this should be handled by some kind of clothing/equipment system and probably this should apply that
@@ -51,23 +49,19 @@ public final class SkeletonComponent extends BaseComponent {
 
     }
 
-    public void update(DirectionComponent.Direction currentDirection) {
-        if (shouldChangeSkeleton(currentDirection)) {
-            set(atlasPath, getUpdatedJsonPath(currentDirection));
-        }
-        skeleton.setScaleX(Left.equals(currentDirection) ? -1 : 1);
+    public boolean hasName(String str) {
+        return jsonPath.equals(str);
     }
 
-    private Boolean shouldChangeSkeleton(DirectionComponent.Direction requestedDirection) {
-        return !jsonPath.equals(getUpdatedJsonPath(requestedDirection));
-
+    public void setTo(String jsonPath) {
+        this.set(atlasPath, jsonPath);
     }
 
-    private String getUpdatedJsonPath(DirectionComponent.Direction currentDirection) {
-        if (currentDirection.equals(Left) || currentDirection.equals(Right)) {
-            return String.format(JsonNameStructure, "Male", "Side");
-        } else {
-            return String.format(JsonNameStructure, "Male", currentDirection.name());
-        }
+    public void flipX(Boolean flip) {
+        this.skeleton.setScaleX(flip ? -1 : 1);
+    }
+
+    public void flipY(Boolean flip) {
+        this.skeleton.setScaleY(flip ? -1 : 1);
     }
 }

@@ -22,26 +22,16 @@ public final class AnimationComponent extends BaseComponent {
 
     public void update(Skeleton skeleton, String animation, Boolean loop) {
         if (canChangeAnimation(animation)) {
-            if (shouldUpdateSkeleton(skeleton)) {
-                animationStateData = new AnimationStateData(skeleton.getData());
-                animationState = new AnimationState(animationStateData);
-            }
+            animationStateData = new AnimationStateData(skeleton.getData());
+            animationState = new AnimationState(animationStateData);
             animationState.setAnimation(0, animation, loop);
         }
     }
 
-    private boolean shouldUpdateSkeleton(Skeleton skeleton) {
-        return !animationStateData.getSkeletonData().equals(skeleton.getData());
-    }
-
     public Boolean canChangeAnimation(String animation) {
-        if (animationState == null) {
-            return true;
-        }
+        if (animationState == null) { return true; }
         AnimationState.TrackEntry currentAnimation = animationState.getCurrent(0);
-        if (currentAnimation == null) {
-            return true;
-        }
+        if (currentAnimation == null) { return true; }
         boolean isSame = currentAnimation.getAnimation().getName().equals(animation);
         boolean canBeInterrupted = currentAnimation.getLoop() || currentAnimation.isComplete();
         return !isSame && canBeInterrupted;

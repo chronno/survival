@@ -16,7 +16,5 @@ public class SurvivalGameLauncher {
         } finally {
             Log.info("Game is shutting down");
         }
-
-
     }
 }

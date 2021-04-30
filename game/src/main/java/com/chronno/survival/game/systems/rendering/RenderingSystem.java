@@ -20,12 +20,12 @@ public class RenderingSystem extends EntitySystem {
 
     private final OrthographicCamera camera;
     private final SpriteBatch spriteBatch;
-        private ImmutableArray<Entity> entities;
+    private ImmutableArray<Entity> entities;
 
     public RenderingSystem(int priority, OrthographicCamera camera) {
         super(priority);
         this.camera = camera;
-        this.camera.zoom = 2;
+        this.camera.zoom = 1.5f;
         this.camera.setToOrtho(false);
         this.camera.translate(160,320);
         this.spriteBatch = new SpriteBatch();

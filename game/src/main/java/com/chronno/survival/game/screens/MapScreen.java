@@ -13,8 +13,9 @@ import com.chronno.survival.game.components.TilemapComponent;
 import com.chronno.survival.game.components.rendering.RendererComponent;
 import com.chronno.survival.game.components.rendering.SpineAnimationRenderer;
 import com.chronno.survival.game.components.rendering.TileMapRenderer;
-import com.chronno.survival.game.systems.CharacterActionSystem;
-import com.chronno.survival.game.systems.player.PlayerInputSystem;
+import com.chronno.survival.game.components.type.EntityTypeComponent;
+import com.chronno.survival.game.components.type.PlayerEntity;
+import com.chronno.survival.game.systems.player.PlayerSystem;
 import com.chronno.survival.game.systems.rendering.RenderingSystem;
 
 public class MapScreen implements Screen {
@@ -28,9 +29,7 @@ public class MapScreen implements Screen {
     @Override
     public void show() {
         engine.addSystem(new RenderingSystem(3, new OrthographicCamera(960, 640)));
-        engine.addSystem(new CharacterActionSystem(4));
-        engine.addSystem(new PlayerInputSystem(5));
-
+        engine.addSystem(new PlayerSystem(5));
         createMapEntity();
         createPlayerEntity();
     }
@@ -60,6 +59,9 @@ public class MapScreen implements Screen {
         RendererComponent rendererComponent = engine.createComponent(RendererComponent.class);
         rendererComponent.set(new SpineAnimationRenderer());
         characterEntity.add(rendererComponent);
+        EntityTypeComponent entityTypeComponent = engine.createComponent(EntityTypeComponent.class);
+        entityTypeComponent.set(new PlayerEntity());
+        characterEntity.add(entityTypeComponent);
         engine.addEntity(characterEntity);
     }
 

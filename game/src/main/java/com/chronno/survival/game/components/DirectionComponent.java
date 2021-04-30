@@ -1,5 +1,7 @@
 package com.chronno.survival.game.components;
 
+import com.chronno.survival.game.model.Direction;
+
 public final class DirectionComponent extends BaseComponent {
 
     private Direction direction = Direction.Down;
@@ -17,11 +19,8 @@ public final class DirectionComponent extends BaseComponent {
         return this.direction;
     }
 
-    public enum Direction {
-        Left,
-        Right,
-        Up,
-        Down,
-        Empty
+
+    public boolean isSame(Direction direction) {
+        return direction.equals(Direction.Empty) || direction.equals(this.direction);
     }
 }
