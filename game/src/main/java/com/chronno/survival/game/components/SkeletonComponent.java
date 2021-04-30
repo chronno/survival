@@ -28,6 +28,14 @@ public final class SkeletonComponent extends BaseComponent {
         skeleton.setY(512);
     }
 
+    @Override
+    public void reset() {
+        atlasPath = null;
+        jsonPath = null;
+        skeleton = null;
+    }
+
+
     //TODO remove this this should be handled by some kind of clothing/equipment system and probably this should apply that
     private void setBasicSkin(SkeletonData skeletonData) {
         Skin headSkin = skeletonData.findSkin("Head");
@@ -44,10 +52,6 @@ public final class SkeletonComponent extends BaseComponent {
         return skeleton;
     }
 
-    @Override
-    public void reset() {
-
-    }
 
     public boolean hasName(String str) {
         return jsonPath.equals(str);

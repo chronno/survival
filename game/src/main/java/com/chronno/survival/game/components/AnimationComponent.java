@@ -39,5 +39,7 @@ public final class AnimationComponent extends BaseComponent {
 
     @Override
     public void reset() {
+        animationState = null;
+        animationStateData = null;
     }
 }

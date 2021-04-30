@@ -11,7 +11,8 @@ public final class TilemapComponent extends BaseComponent {
 
     @Override
     public void reset() {
-
+        tiledMap.dispose();
+        tiledMap = null;
     }
 
     public void set(String mapPath) {

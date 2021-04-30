@@ -4,7 +4,7 @@ import com.chronno.survival.game.model.Action;
 
 public final class ActionComponent extends BaseComponent {
 
-    private Action currentAction = Action.Idle;
+    private Action currentAction;
 
     public void set(Action nextAction) {
         this.currentAction = nextAction;
@@ -16,5 +16,6 @@ public final class ActionComponent extends BaseComponent {
 
     @Override
     public void reset() {
+        currentAction = Action.Idle;
     }
 }

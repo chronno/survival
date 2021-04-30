@@ -27,6 +27,7 @@ public final class PositionComponent extends BaseComponent {
 
     @Override
     public void reset() {
-
+        x = 0;
+        y = 0;
     }
 }
