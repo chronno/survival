@@ -19,6 +19,6 @@ public class RendererComponent extends BaseComponent {
 
     @Override
     public void reset() {
-
+        renderer = null;
     }
 }

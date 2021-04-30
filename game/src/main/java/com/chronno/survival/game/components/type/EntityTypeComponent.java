@@ -17,7 +17,7 @@ public class EntityTypeComponent extends BaseComponent {
 
     @Override
     public void reset() {
-
+        type = null;
     }
 
     public void update(Entity entity) {
