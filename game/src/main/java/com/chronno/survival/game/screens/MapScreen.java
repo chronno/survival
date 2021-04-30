@@ -2,7 +2,7 @@ package com.chronno.survival.game.screens;
 
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.PooledEngine;
-import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.chronno.survival.game.components.ActionComponent;
 import com.chronno.survival.game.components.AnimationComponent;
@@ -18,7 +18,7 @@ import com.chronno.survival.game.components.type.PlayerEntity;
 import com.chronno.survival.game.systems.player.PlayerSystem;
 import com.chronno.survival.game.systems.rendering.RenderingSystem;
 
-public class MapScreen implements Screen {
+public class MapScreen extends ScreenAdapter {
 
     private final PooledEngine engine;
 
@@ -68,25 +68,6 @@ public class MapScreen implements Screen {
     @Override
     public void render(float delta) {
         engine.update(delta);
-    }
-
-    @Override
-    public void resize(int width, int height) {
-    }
-
-    @Override
-    public void pause() {
-
-    }
-
-    @Override
-    public void resume() {
-
-    }
-
-    @Override
-    public void hide() {
-
     }
 
     @Override
