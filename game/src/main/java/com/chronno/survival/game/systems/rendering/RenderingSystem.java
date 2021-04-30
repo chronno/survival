@@ -47,16 +47,12 @@ public class RenderingSystem extends EntitySystem {
     @Override
     public void update(float deltaTime) {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
         this.camera.update();
         spriteBatch.setProjectionMatrix(camera.combined);
         entities.forEach(entity -> {
             RendererComponent rendererComponent = RendererMapper.get(entity);
             rendererComponent.draw(entity, spriteBatch, camera, deltaTime);
         });
-        spriteBatch.begin();
-
-        spriteBatch.end();
     }
 
 }

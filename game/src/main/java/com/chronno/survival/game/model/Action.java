@@ -18,7 +18,13 @@ public enum Action {
         public Boolean isLoopable() {
             return false;
         }
-    };
+    },
+    Spell {
+        @Override
+        public Boolean isLoopable() {
+            return false;
+        }
+    };;
 
     public abstract Boolean isLoopable();
 }

@@ -2,6 +2,7 @@ package com.chronno.survival.game.screens;
 
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.PooledEngine;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.chronno.survival.game.components.ActionComponent;
@@ -15,6 +16,7 @@ import com.chronno.survival.game.components.rendering.SpineAnimationRenderer;
 import com.chronno.survival.game.components.rendering.TileMapRenderer;
 import com.chronno.survival.game.components.type.EntityTypeComponent;
 import com.chronno.survival.game.components.type.PlayerEntity;
+import com.chronno.survival.game.systems.player.Input;
 import com.chronno.survival.game.systems.player.PlayerSystem;
 import com.chronno.survival.game.systems.rendering.RenderingSystem;
 
@@ -28,7 +30,9 @@ public class MapScreen extends ScreenAdapter {
 
     @Override
     public void show() {
-        engine.addSystem(new RenderingSystem(3, new OrthographicCamera(960, 640)));
+        OrthographicCamera orthographicCamera = new OrthographicCamera(960, 640);
+        Gdx.input.setInputProcessor(new Input(orthographicCamera));
+        engine.addSystem(new RenderingSystem(0, orthographicCamera));
         engine.addSystem(new PlayerSystem(5));
         createMapEntity();
         createPlayerEntity();

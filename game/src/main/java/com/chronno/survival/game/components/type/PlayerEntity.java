@@ -25,9 +25,8 @@ public class PlayerEntity implements EntityType {
 
     @Override
     public void update(Entity entity) {
-
         if (Gdx.input.isKeyJustPressed(Keys.A)) {
-            process(entity, Action.Swing, Direction.Empty);
+            process(entity, Action.Spell, Direction.Empty);
         } else if (Gdx.input.isKeyPressed(Keys.DOWN)) {
             process(entity, Action.Walk, Direction.Down);
         } else if (Gdx.input.isKeyPressed(Keys.UP)) {
@@ -49,13 +48,14 @@ public class PlayerEntity implements EntityType {
         Direction realDirection = getRealDirection(direction, directionComponent);
         String requiredAnimationName = String.format(AnimationNameTemplate, realDirection.name(), action.name());
         String requiredSkeleton = String.format(CharacterSkeletonPathTemplate, realDirection.name());
-        if (!directionComponent.isSame(realDirection) || animationComponent.canChangeAnimation(requiredAnimationName)) {
+        if (animationComponent.canChangeAnimation(requiredAnimationName)) {
             skeletonComponent.setTo(requiredSkeleton);
             skeletonComponent.flipX(realDirection.equals(Direction.Left));
-            animationComponent.update(skeletonComponent.getSkeleton(), requiredAnimationName, action.isLoopable());
             directionComponent.set(realDirection);
             actionComponent.set(action);
+            animationComponent.update(skeletonComponent.getSkeleton(), requiredAnimationName, action.isLoopable());
         }
+
     }
 
     private Direction getRealDirection(Direction direction, DirectionComponent directionComponent) {
