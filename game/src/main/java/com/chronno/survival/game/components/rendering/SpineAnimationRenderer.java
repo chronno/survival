@@ -22,9 +22,9 @@ public class SpineAnimationRenderer implements Renderer {
     public void render(Entity entity, SpriteBatch spriteBatch, Camera camera, Float delta) {
         SkeletonComponent skeletonComponent = SkeletonMapper.get(entity);
         AnimationComponent animationComponent = AnimationMapper.get(entity);
+        skeletonComponent.getSkeleton().updateWorldTransform();
         animationComponent.getAnimationState().update(delta);
         animationComponent.getAnimationState().apply(skeletonComponent.getSkeleton());
-        skeletonComponent.getSkeleton().updateWorldTransform();
         spriteBatch.begin();
         skeletonRenderer.draw(spriteBatch, skeletonComponent.getSkeleton());
         spriteBatch.end();

@@ -46,23 +46,19 @@ public class PlayerEntity implements EntityType {
         SkeletonComponent skeletonComponent = SkeletonMapper.get(entity);
         AnimationComponent animationComponent = AnimationMapper.get(entity);
         ActionComponent actionComponent = ActionMapper.get(entity);
-        String requiredAnimationName = getAnimationName(action, direction, directionComponent);
-        if (!directionComponent.isSame(direction)) {
-            String requiredSkeleton = String.format(CharacterSkeletonPathTemplate, direction.name());
+        Direction realDirection = getRealDirection(direction, directionComponent);
+        String requiredAnimationName = String.format(AnimationNameTemplate, realDirection.name(), action.name());
+        String requiredSkeleton = String.format(CharacterSkeletonPathTemplate, realDirection.name());
+        if (!directionComponent.isSame(realDirection) || animationComponent.canChangeAnimation(requiredAnimationName)) {
             skeletonComponent.setTo(requiredSkeleton);
-            skeletonComponent.flipX(direction.equals(Direction.Left));
-            directionComponent.set(direction);
-        }
-        if (animationComponent.canChangeAnimation(requiredAnimationName)){
+            skeletonComponent.flipX(realDirection.equals(Direction.Left));
             animationComponent.update(skeletonComponent.getSkeleton(), requiredAnimationName, action.isLoopable());
+            directionComponent.set(realDirection);
             actionComponent.set(action);
         }
     }
 
-    private String getAnimationName(Action action, Direction direction, DirectionComponent directionComponent) {
-        String directionName =  direction.equals(Direction.Empty) ? directionComponent.getDirection().name() : direction.name();
-        return String.format(AnimationNameTemplate, directionName, action.name());
+    private Direction getRealDirection(Direction direction, DirectionComponent directionComponent) {
+        return direction.equals(Direction.Empty) ? directionComponent.getDirection() : direction;
     }
-
-
 }
