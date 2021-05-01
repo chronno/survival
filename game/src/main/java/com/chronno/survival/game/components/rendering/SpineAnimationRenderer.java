@@ -4,8 +4,8 @@ import com.badlogic.ashley.core.ComponentMapper;
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.chronno.survival.game.components.AnimationComponent;
-import com.chronno.survival.game.components.SkeletonComponent;
+import com.chronno.survival.game.components.drawable.AnimationComponent;
+import com.chronno.survival.game.components.drawable.SkeletonComponent;
 import com.esotericsoftware.spine.SkeletonRenderer;
 
 public class SpineAnimationRenderer implements Renderer {

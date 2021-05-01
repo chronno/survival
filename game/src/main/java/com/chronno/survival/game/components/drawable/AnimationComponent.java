@@ -1,5 +1,6 @@
-package com.chronno.survival.game.components;
+package com.chronno.survival.game.components.drawable;
 
+import com.chronno.survival.game.components.BaseComponent;
 import com.esotericsoftware.spine.AnimationState;
 import com.esotericsoftware.spine.AnimationStateData;
 import com.esotericsoftware.spine.Skeleton;

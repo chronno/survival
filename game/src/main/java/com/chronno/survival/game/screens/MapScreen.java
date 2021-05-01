@@ -5,12 +5,12 @@ import com.badlogic.ashley.core.PooledEngine;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.chronno.survival.game.components.ActionComponent;
-import com.chronno.survival.game.components.AnimationComponent;
-import com.chronno.survival.game.components.DirectionComponent;
-import com.chronno.survival.game.components.PositionComponent;
-import com.chronno.survival.game.components.SkeletonComponent;
-import com.chronno.survival.game.components.TilemapComponent;
+import com.chronno.survival.game.components.character.ActionComponent;
+import com.chronno.survival.game.components.drawable.AnimationComponent;
+import com.chronno.survival.game.components.character.DirectionComponent;
+import com.chronno.survival.game.components.drawable.PositionComponent;
+import com.chronno.survival.game.components.drawable.SkeletonComponent;
+import com.chronno.survival.game.components.drawable.TilemapComponent;
 import com.chronno.survival.game.components.rendering.RendererComponent;
 import com.chronno.survival.game.components.rendering.SpineAnimationRenderer;
 import com.chronno.survival.game.components.rendering.TileMapRenderer;
@@ -30,7 +30,7 @@ public class MapScreen extends ScreenAdapter {
 
     @Override
     public void show() {
-        OrthographicCamera orthographicCamera = new OrthographicCamera(960, 640);
+        OrthographicCamera orthographicCamera = new OrthographicCamera(12, 8);
         Gdx.input.setInputProcessor(new Input(orthographicCamera));
         engine.addSystem(new RenderingSystem(0, orthographicCamera));
         engine.addSystem(new PlayerSystem(5));

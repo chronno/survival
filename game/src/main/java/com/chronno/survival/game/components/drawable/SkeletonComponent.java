@@ -1,7 +1,8 @@
-package com.chronno.survival.game.components;
+package com.chronno.survival.game.components.drawable;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.chronno.survival.game.components.BaseComponent;
 import com.esotericsoftware.spine.Skeleton;
 import com.esotericsoftware.spine.SkeletonData;
 import com.esotericsoftware.spine.SkeletonJson;
@@ -24,8 +25,6 @@ public final class SkeletonComponent extends BaseComponent {
         final SkeletonData skeletonData = skeletonJson.readSkeletonData(Gdx.files.internal(AnimationsPath.concat(jsonPath)));
         setBasicSkin(skeletonData);
         skeleton = new Skeleton(skeletonData);
-        skeleton.setX(512);
-        skeleton.setY(512);
     }
 
     @Override

@@ -1,7 +1,8 @@
-package com.chronno.survival.game.components;
+package com.chronno.survival.game.components.drawable;
 
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
+import com.chronno.survival.game.components.BaseComponent;
 
 public final class TilemapComponent extends BaseComponent {
 

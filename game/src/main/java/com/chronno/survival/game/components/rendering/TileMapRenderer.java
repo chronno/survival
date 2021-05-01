@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
-import com.chronno.survival.game.components.TilemapComponent;
+import com.chronno.survival.game.components.drawable.TilemapComponent;
 
 public class TileMapRenderer implements Renderer {
 

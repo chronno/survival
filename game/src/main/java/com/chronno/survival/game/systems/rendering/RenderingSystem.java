@@ -41,6 +41,7 @@ public class RenderingSystem extends EntitySystem {
 
     @Override
     public void removedFromEngine(Engine engine) {
+        spriteBatch.dispose();
         Log.info("Rendering System was removed");
     }
 
@@ -53,6 +54,7 @@ public class RenderingSystem extends EntitySystem {
             RendererComponent rendererComponent = RendererMapper.get(entity);
             rendererComponent.draw(entity, spriteBatch, camera, deltaTime);
         });
+        Log.info("fps:" + Gdx.graphics.getFramesPerSecond());
     }
 
 }

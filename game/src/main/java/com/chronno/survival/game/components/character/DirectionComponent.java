@@ -1,5 +1,6 @@
-package com.chronno.survival.game.components;
+package com.chronno.survival.game.components.character;
 
+import com.chronno.survival.game.components.BaseComponent;
 import com.chronno.survival.game.model.Direction;
 
 public final class DirectionComponent extends BaseComponent {
