@@ -3,7 +3,7 @@ package com.chronno.survival.game.components.drawable;
 import com.chronno.survival.game.components.BaseComponent;
 
 public final class PositionComponent extends BaseComponent {
-    private Integer x = 512;
+    private Integer x = 1024;
     private Integer y = 512;
 
     public Integer getX() {

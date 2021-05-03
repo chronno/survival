@@ -10,6 +10,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
+import com.badlogic.gdx.physics.box2d.World;
 import com.chronno.survival.game.components.rendering.RendererComponent;
 import com.esotericsoftware.minlog.Log;
 
@@ -22,13 +24,18 @@ public class RenderingSystem extends EntitySystem {
     private final SpriteBatch spriteBatch;
     private ImmutableArray<Entity> entities;
 
-    public RenderingSystem(int priority, OrthographicCamera camera) {
+    private Box2DDebugRenderer debugRenderer;
+    private World world;
+
+    public RenderingSystem(int priority, OrthographicCamera camera, World world) {
         super(priority);
         this.camera = camera;
         this.camera.zoom = 1.5f;
         this.camera.setToOrtho(false);
         this.camera.translate(160,320);
         this.spriteBatch = new SpriteBatch();
+        this.debugRenderer = new Box2DDebugRenderer();
+        this.world = world;
     }
 
     @Override
@@ -54,7 +61,7 @@ public class RenderingSystem extends EntitySystem {
             RendererComponent rendererComponent = RendererMapper.get(entity);
             rendererComponent.draw(entity, spriteBatch, camera, deltaTime);
         });
-        Log.info("fps:" + Gdx.graphics.getFramesPerSecond());
+        debugRenderer.render(world ,camera.combined);
     }
 
 }
